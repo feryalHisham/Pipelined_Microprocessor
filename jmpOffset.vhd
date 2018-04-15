@@ -1,0 +1,44 @@
+
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+
+ENTITY jmpOffset IS 
+GENERIC ( n : integer := 16); 
+        PORT (IRBuff: IN std_logic_vector(n-1 DOWNTO 0);
+        flagReg : IN std_logic_vector(3 DOWNTO 0);
+        delayJMP,delayJMPDE,clk:in std_logic;
+        offsetSel,jmpCondReg : OUT std_logic);    
+END ENTITY jmpOffset;
+
+
+ARCHITECTURE offset OF jmpOffset IS
+
+
+component my_DFF IS
+     PORT( d,clk,rst,en : IN std_logic;   q : OUT std_logic);
+END component;
+
+signal jmpZ,jmpN,jmpC,jmpCond,jmpCondRegsig,jmpCondRegRst,jmpCondToReg :std_logic;
+
+constant jzOp :std_logic_vector(6 downto 0):= "0000000";
+constant jnOp :std_logic_vector(6 downto 0):= "0000001";
+constant jcOp :std_logic_vector(6 downto 0):= "0000010";
+
+BEGIN
+    
+
+    jmpCond<= '1' when ((IRBuff(15 downto 9) =jzOp and flagReg(3)='1')
+    or (IRBuff(15 downto 9) =jnOp and flagReg(2)='1')
+    or (IRBuff(15 downto 9) =jcOp and flagReg(1)='1'))
+    else '0';
+
+    jmpCondToReg<=jmpCond or delayJMP;
+    offsetSel<=jmpCond or delayJMPDE;
+    jmpCondReg<=jmpCondRegsig;
+    jmpCondRegRst<=jmpCondRegsig and (not clk);
+    condJMP: my_DFF port map(jmpCondToReg,clk,jmpCondRegRst,'1',jmpCondRegsig); --make sure of enable
+    
+
+
+END offset;
+
