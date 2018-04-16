@@ -1,0 +1,22 @@
+# Current time Mon Apr 16 15:41:01 2018
+# ModelSim Stack Trace
+# Program = vish
+# Id = "10.3c"
+# Version = "2014.09"
+# Date = "Sep 20 2014"
+# Platform = linuxpe
+# 0    0x0859e050: '<unknown (@0x859e050)>'
+# 1    0x0859ebcc: 'sym_load_block + 0xec' in '/home/fatema/altera/14.1/modelsim_ase/linuxaloem/vish'
+# 2    0x0859f8be: '<unknown (@0x859f8be)>'
+# 3    0x085a17cb: 'parser_sym_load_block + 0xcb' in '/home/fatema/altera/14.1/modelsim_ase/linuxaloem/vish'
+# 4    0x083588d5: 'tclprim_ParserGetFullPath + 0x285' in '/home/fatema/altera/14.1/modelsim_ase/linuxaloem/vish'
+# 5    0x084b4071: 'TclInvokeStringCommand + 0x71' in '/home/fatema/altera/14.1/modelsim_ase/linuxaloem/vish'
+# 6    0x084b8b8d: '<unknown (@0x84b8b8d)>'
+# 7    0x085017aa: '<unknown (@0x85017aa)>'
+# 8    0x0850a14c: '<unknown (@0x850a14c)>'
+# 9    0x084bad0c: 'TclEvalObjEx + 0x6c' in '/home/fatema/altera/14.1/modelsim_ase/linuxaloem/vish'
+# 10   0x084bb1a6: 'Tcl_EvalObjEx + 0x36' in '/home/fatema/altera/14.1/modelsim_ase/linuxaloem/vish'
+# 11   0xf77f7eac: 'Itcl_EvalMemberCode + 0x3cc' in '/home/fatema/altera/14.1/modelsim_ase/linuxaloem/itcl3.4/libitcl3.4.so'
+# 12   0x0bf74653: '<unknown (@0xbf74653)>'
+# 13   0x09a0edcb: '<unknown (@0x9a0edcb)>'
+# 14   0xf7006a5d: '<unknown (@0xf7006a5d)>'

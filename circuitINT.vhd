@@ -6,10 +6,10 @@ use ieee.numeric_std.all;
 ENTITY intCircuit IS 
 GENERIC ( n : integer := 16); 
         PORT (pc : IN std_logic_vector(n-1 DOWNTO 0);
-       int,stallLD,clk,rstHard:IN std_logic;
-        
-        counterEn,counterRst,intBuff,pcINTEn,intEn,excINT,selINTPC,flagBuffEn : OUT std_logic
-        --counterIntout:OUT std_logic_vector (2 downto 0)
+       int,stallLD,clk,rstHard:IN std_logic;      
+        pcINTEn,intEn,excINT,selINTPC,flagBuffEn : OUT std_logic;
+        counterIntout:OUT std_logic_vector (2 downto 0);
+        pcINTOut: OUT std_logic_vector(n-1 DOWNTO 0)
         );    
 END ENTITY intCircuit;
 
@@ -34,46 +34,44 @@ component counterINT is
      z : out STD_LOGIC_vector( n-1 downto 0 ));
   end component;
 
-signal counterEnSig,counterRstSig,intBuffSig,pcINTEnSig,intEnSig,excINTSig,selINTPCSig,flagBuffEnSig: std_logic ;
+signal counterEnSig,counterRstSig,pcINTEnSig,intEnSig,excINTSig,selINTPCSig,flagBuffEnSig: std_logic ;
 signal counterOut:std_logic_vector (2 downto 0);
-signal pcINTIn,pcINTOutSig:std_logic_vector (n-1 downto 0);
+signal pcINTIn:std_logic_vector (n-1 downto 0);
 
 BEGIN
 
 
-    intBuffL: my_DFF port map(int,clk,int,counterRstSig,intBuffSig);
+    --intBuffL: my_DFF port map(int,clk,int,counterRstSig,intBuffSig);
     counterINTReg: counterINT GENERIC MAP (n=>3) port map (counterRstSig,clk,counterEnSig,counterOut);
-    pcINTL: my_nDFF GENERIC MAP (n=>16) port map(clk,rstHard,pcINTEnSig,pcINTIn,pcINTOutSig);
+    pcINTL: my_nDFF GENERIC MAP (n=>16) port map(clk,rstHard,pcINTEnSig,pcINTIn,pcINTOut);
 
 
 
     counterRstSig<='1' when counterOut="101" or rstHard='1'
     else '0';
 
-    excINTSig<='1' when counterOut="100" or intBuffSig='1'
+    excINTSig<='1' when counterOut="100" or intEnSig='1'
     else '0';
 
-    selINTPCSig<='1' when counterOut="011" or intBuffSig='1'
+    selINTPCSig<='1' when counterOut="011" or intEnSig='1'
     else '0';
 
-    flagBuffEnSig<='1' when counterOut="001" or intBuffSig='1'
+    flagBuffEnSig<='1' when counterOut="001" or intEnSig='1'
     else '0';
 
     pcINTEnSig<= '1' when counterOut="001" or intEnSig='1'
     else '0';
 
-    counterEn<=counterEnSig;
-    counterRst<=counterRstSig;
-    intBuff<=intBuffSig;
-    pcINTEn<=pcINTEnSig;
+    --intBuff<=intBuffSig;
     intEn<=intEnSig;
     excINT<=excINTSig;
     selINTPC<=selINTPCSig;
     flagBuffEn<=flagBuffEnSig;
-    --counterIntOut<=counterOut;
+    counterIntOut<=counterOut;
     
-    intEnSig<=int or intBuffSig;
-    ---intBuffEn<=int or rstHard;
+    intEnSig<='1' when int='1'
+    else '0' when counterRstSig='1';
+    
     counterEnSig<= intEnSig and (not stallLD);
     pcINTIn<= std_logic_vector(unsigned(pc)+1);
     

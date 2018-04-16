@@ -6,7 +6,8 @@ GENERIC ( n : integer := 16);
 		PORT (IRBuff : IN std_logic_vector(n-1 DOWNTO 0);
         twoOp,jmpCond,incSp,enSP ,enMemWr,lddORpop,setcORclrc,
         imm,wrEnRdst,enExecRes,wrEnRsrc,memRead,outEnReg,
-        alu1,alu2,alu3,s1Wb,s0Wb : OUT std_logic);    
+        alu1,alu2,alu3,s1Wb,s0Wb,
+        RET,RTI,PUSH,STD : OUT std_logic);    
 END ENTITY irSignals;
 
 
@@ -29,8 +30,8 @@ constant jnOp :std_logic_vector(6 downto 0):= "0000001";
 constant jcOp :std_logic_vector(6 downto 0):= "0000010";
 
 --signal incSp :std_logic;
-constant rtiOp :std_logic_vector(6 downto 0):= "0100000";
-constant retOp :std_logic_vector(6 downto 0):= "0100001";
+constant retOp :std_logic_vector(6 downto 0):= "0100000";
+constant rtiOp :std_logic_vector(6 downto 0):= "0100001";
 constant lddOp :std_logic_vector(6 downto 0):= "0100010";
 constant popOp :std_logic_vector(6 downto 0):= "0100011";
 
@@ -120,6 +121,14 @@ BEGIN
     wrEnRsrc <='1' when IRBuff(15 downto 9) = mulOp
     else '0';
 
+    RET<='1' when IRBuff(15 downto 9) =  retOp
+    else '0';
+    RTI<='1' when IRBuff(15 downto 9) =  retOp
+    else '0';
+    PUSH<='1' when IRBuff(15 downto 9) =  pushOp
+    else '0';
+    STD<='1' when IRBuff(15 downto 9) =  stdOp
+    else '0';
     alu1<=IRBuff(12);
     alu2<=IRBuff(11);
     alu3<=IRBuff(10);

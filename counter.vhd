@@ -18,7 +18,8 @@ begin
     if rising_edge(clk) then              
       if rst ='1' then                   
         zint <= "00" ;                  
-      --elsif (zint = "11" )then zint <= "11";
+     -- elsif zint = "11" then 
+       -- zint <= "11";
       elsif up='1' then
         zint <= zint+1;
       --else 

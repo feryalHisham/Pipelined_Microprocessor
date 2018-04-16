@@ -28,14 +28,14 @@ BEGIN
     
 
     jmpCond<= '1' when ((IRBuff(15 downto 9) =jzOp and flagReg(3)='1')
-    or (IRBuff(15 downto 9) =jcOp and flagReg(2)='1')
-    or (IRBuff(15 downto 9) =jnOp and flagReg(1)='1'))
+    or (IRBuff(15 downto 9) =jnOp and flagReg(2)='1')
+    or (IRBuff(15 downto 9) =jcOp and flagReg(1)='1'))
     else '0';
 
     jmpCondToReg<=jmpCond or delayJMP;
     offsetSel<=jmpCond or delayJMPDE;
     jmpCondReg<=jmpCondRegsig;
-    jmpCondRegRst<=(jmpCondRegsig and (not clk))or rstHard;
+    jmpCondRegRst<=(jmpCondRegsig )or rstHard;
     condJMP: my_DFF port map(jmpCondToReg,clk,jmpCondRegRst,'1',jmpCondRegsig); --make sure of enable
     
 
