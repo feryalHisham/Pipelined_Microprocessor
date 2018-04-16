@@ -7,7 +7,7 @@ GENERIC ( n : integer := 16);
         PORT (IR : IN std_logic_vector(n-1 DOWNTO 0);
         stallLD,clk: std_logic;
         stallRT,stallRTbuff : OUT std_logic;
-          counterRTout:OUT std_logic_vector (1 downto 0));    
+        counterRTout:OUT std_logic_vector (1 downto 0));    
 END ENTITY rtCircuit;
 
 ARCHITECTURE circuitRT OF rtCircuit IS
