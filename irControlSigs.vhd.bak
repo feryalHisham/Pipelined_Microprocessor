@@ -132,7 +132,7 @@ BEGIN
     alu1<=IRBuff(12);
     alu2<=IRBuff(11);
     alu3<=IRBuff(10);
-    alu4<=IRBuff(9);
+    alu3<=IRBuff(9);
 
     s1Wb<='1' when IRBuff(15 downto 9) =  inOp
     or IRBuff(15 downto 9) =  ldmOp

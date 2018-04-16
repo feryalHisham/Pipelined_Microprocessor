@@ -38,7 +38,7 @@ GENERIC ( n : integer := 16);
 			rSrcBuf,rDstBuf : OUT std_logic_vector(n-1 DOWNTO 0));    
 END component;
 
-signal forward:std_logic;
+signal forward,twoOp:std_logic;
 BEGIN
 	forward<=memReadMW or MulDE or RtypeDE;
 --	twoOp<=

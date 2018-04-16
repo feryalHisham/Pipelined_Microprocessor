@@ -120,7 +120,7 @@ out_en_reg_im_iww: my_DFF port map(out_en_reg_ie_im,Clk,Reset,'1', out_en_reg_im
 
 exc_h:my_nDFF port map(Clk,Reset,'1',Exc_result_H_IE_IM, Exc_result_H_IM_IW);
 exc_l:my_nDFF port map(Clk,Reset,'1',Exc_result_L_IE_IM, Exc_result_L_IM_IW);
-
+en_write_Rdst_IE_IM
 rdst_wr:my_DFF port map(en_write_Rdst_IE_IM,Clk,Reset,'1',en_write_Rdst_IM_IW);
 rsrc_wr:my_DFF port map(en_write_Rsrc_IE_IM,Clk,Reset,'1',en_write_Rsrc_IM_IW);
 

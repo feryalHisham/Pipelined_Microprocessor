@@ -10,7 +10,7 @@ GENERIC ( n : integer := 16);
         offsetSel,
         twoOp,incSp,enSP ,enMemWr,lddORpop,setcORclrc,
         imm,wrEnRdst,enExecRes,wrEnRsrc,outEnReg,
-        alu1,alu2,alu3,alu4,s1Wb,s0Wb,
+        alu1,alu2,alu3,s1Wb,s0Wb,
         RET,RTI,PUSH,STD: OUT std_logic;
         counterRTout:OUT std_logic_vector (1 downto 0));    
 END ENTITY controlUnit;
@@ -39,14 +39,14 @@ GENERIC ( n : integer := 16);
         PORT (IRBuff : IN std_logic_vector(n-1 DOWNTO 0);
         twoOp,incSp,enSP ,enMemWr,lddORpop,setcORclrc,
         imm,wrEnRdst,enExecRes,wrEnRsrc,outEnReg,
-        alu1,alu2,alu3,alu4,s1Wb,s0Wb,
+        alu1,alu2,alu3,s1Wb,s0Wb,
         RET,RTI,PUSH,STD : OUT std_logic);    
 END component;
 
 
 BEGIN
 irSignalsL: irSignals GENERIC MAP (n=>16) port map (IRBuff,twoOp,incSp,enSP ,enMemWr,lddORpop,setcORclrc,
-                imm,wrEnRdst,enExecRes,wrEnRsrc,outEnReg,alu1,alu2,alu3,alu4,s1Wb,s0Wb,RET,RTI,PUSH,STD);
+                imm,wrEnRdst,enExecRes,wrEnRsrc,outEnReg,alu1,alu2,alu3,s1Wb,s0Wb,RET,RTI,PUSH,STD);
 RTcircuitL: rtCircuit GENERIC MAP (n=>16) port map (IR,stallLD,clk,rstHard,counterRTout);
 jmpOffsetL: jmpOffset  GENERIC MAP (n=>16) port map (IRBuff,flagReg,delayJMPDE,clk,rstHard,offsetSel,jmpCondBuff);
 

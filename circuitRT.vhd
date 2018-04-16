@@ -6,7 +6,7 @@ ENTITY rtCircuit IS
 GENERIC ( n : integer := 16); 
         PORT (IR : IN std_logic_vector(n-1 DOWNTO 0);
         stallLD,clk,rstHard: IN std_logic;
-        stallRT : OUT std_logic;
+        --stallRT : OUT std_logic;
         counterRTout:OUT std_logic_vector (1 downto 0));    
 END ENTITY rtCircuit;
 
@@ -39,7 +39,7 @@ counterEn <=(not stallLD) and (stallRTsig); --awl mra w stallRT msh 3arfenha ???
 
 counter3 <='1'when counterRToutsig ="11" or rstHard='1'
     else '0';
-    stallRT<=stallRTsig;
+    --stallRT<=stallRTsig;
     --  stallRTbuff<=stallRTbuffsig;
     counterRTout<=counterRToutsig;
     --condJMP: my_DFF port map(stallRTsig,counter3,clk,stallRTsig,stallRTbuffsig);

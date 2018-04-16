@@ -793,3 +793,74 @@ force -freeze sim:/intcircuit/stallLD 0 0
 run
 run
 # Compile of irControlSigs.vhd was successful.
+# Compile of controlUnit.vhd failed with 1 errors.
+vsim work.jmpoffset
+# vsim 
+# Start time: 19:53:27 on Apr 16,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.jmpoffset(offset)
+# Loading work.my_dff(a_my_dff)
+
+add wave -position end sim:/jmpoffset/*
+
+force -freeze sim:/jmpoffset/clk 0 0, 1 {50 ps} -r 100
+force -freeze sim:/jmpoffset/IRBuff 1100000000000000 0
+force -freeze sim:/jmpoffset/flagReg 1100 0
+force -freeze sim:/jmpoffset/delayJMP 0 0
+force -freeze sim:/jmpoffset/delayJMPDE 0 0
+force -freeze sim:/jmpoffset/rstHard 0 0
+run
+force -freeze sim:/jmpoffset/rstHard 0 0
+run
+run
+
+force -freeze sim:/jmpoffset/delayJMP 1 0
+run
+run
+# Compile of controlUnit.vhd was successful.
+# Compile of jmpOffset.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.jmpoffset
+# vsim 
+# Start time: 19:54:46 on Apr 16,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.jmpoffset(offset)
+# Loading work.my_dff(a_my_dff)
+
+add wave -position end sim:/jmpoffset/*
+
+force -freeze sim:/jmpoffset/clk 0 0, 1 {50 ps} -r 100
+force -freeze sim:/jmpoffset/IRBuff 1100000000000000 0
+force -freeze sim:/jmpoffset/flagReg 1100 0
+force -freeze sim:/jmpoffset/delayJMP 0 0
+force -freeze sim:/jmpoffset/delayJMPDE 0 0
+force -freeze sim:/jmpoffset/rstHard 0 0
+run
+force -freeze sim:/jmpoffset/rstHard 0 0
+run
+run
+
+force -freeze sim:/jmpoffset/delayJMP 1 0
+run
+run
+restart
+
+force -freeze sim:/jmpoffset/clk 0 0, 1 {50 ps} -r 100
+force -freeze sim:/jmpoffset/IRBuff 1100000000000000 0
+force -freeze sim:/jmpoffset/flagReg 1100 0
+force -freeze sim:/jmpoffset/delayJMP 0 0
+force -freeze sim:/jmpoffset/delayJMPDE 0 0
+force -freeze sim:/jmpoffset/rstHard 0 0
+run
+force -freeze sim:/jmpoffset/rstHard 0 0
+run
+run
+
+force -freeze sim:/jmpoffset/delayJMP 1 0
+run
+force -freeze sim:/jmpoffset/delayJMP 0 0
+run

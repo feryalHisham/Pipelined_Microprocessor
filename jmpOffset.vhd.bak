@@ -6,7 +6,7 @@ ENTITY jmpOffset IS
 GENERIC ( n : integer := 16); 
         PORT (IRBuff: IN std_logic_vector(n-1 DOWNTO 0);
         flagReg : IN std_logic_vector(3 DOWNTO 0);
-        delayJMP,delayJMPDE,clk,rstHard:in std_logic;
+        delayJMPDE,clk,rstHard:in std_logic;
         offsetSel,jmpCondReg : OUT std_logic);    
 END ENTITY jmpOffset;
 
@@ -28,14 +28,14 @@ BEGIN
     
 
     jmpCond<= '1' when ((IRBuff(15 downto 9) =jzOp and flagReg(3)='1')
-    or (IRBuff(15 downto 9) =jnOp and flagReg(2)='1')
-    or (IRBuff(15 downto 9) =jcOp and flagReg(1)='1'))
+    or (IRBuff(15 downto 9) =jcOp and flagReg(2)='1')
+    or (IRBuff(15 downto 9) =jnOp and flagReg(1)='1'))
     else '0';
 
-    jmpCondToReg<=jmpCond or delayJMP;
+    jmpCondToReg<=jmpCond or delayJMPDE;
     offsetSel<=jmpCond or delayJMPDE;
     jmpCondReg<=jmpCondRegsig;
-    jmpCondRegRst<=(jmpCondRegsig )or rstHard;
+    jmpCondRegRst<=(jmpCondRegsig and (not clk))or rstHard;
     condJMP: my_DFF port map(jmpCondToReg,clk,jmpCondRegRst,'1',jmpCondRegsig); --make sure of enable
     
 
