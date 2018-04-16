@@ -79,15 +79,15 @@ begin
 	u5: mux2_1 generic map (n => 32) port map (result_c_32,result_mul,ALU_op(2),result_c_mul_mux);
 	u6: mux2_1 generic map (n => 32) port map (result_a_b_mux,result_c_mul_mux,ALU_op(3),ALU_out);
 
-	cout <= xcout_a when ALU_op(1)='0' and ALU_op(0)='0'
-	else xcout_c when ALU_op(1)='1' and ALU_op(0)='0'
+	cout <= xcout_a when ALU_op(3)='0' and ALU_op(2)='0'
+	else xcout_c when ALU_op(3)='1' and ALU_op(2)='0'
 	else '0';
 
-	overflow <= xoverflow when ALU_op(1)='0' and ALU_op(0)='0'
+	overflow <= xoverflow when ALU_op(3)='0' and ALU_op(2)='0'
 	else '0';
 	
-	neg <= x_neg_a when ALU_op(1)='0' and ALU_op(0)='0'
-	else x_neg_mul when ALU_op(1)='1' and ALU_op(0)='1'
+	neg <= x_neg_a when ALU_op(3)='0' and ALU_op(2)='0'
+	else x_neg_mul when ALU_op(3)='1' and ALU_op(2)='1'
 	else '0';
 
 end  alu_integ_arch;
