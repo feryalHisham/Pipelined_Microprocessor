@@ -7,7 +7,7 @@ ENTITY intCircuit IS
 GENERIC ( n : integer := 16); 
         PORT (pc : IN std_logic_vector(n-1 DOWNTO 0);
        int,stallLD,clk,rstHard:IN std_logic;      
-        pcINTEn,intEn,excINT,selINTPC,flagBuffEn : OUT std_logic;
+        intEn,excINT,selINTPC,flagBuffEn : OUT std_logic;
         counterIntout:OUT std_logic_vector (2 downto 0);
         pcINTOut: OUT std_logic_vector(n-1 DOWNTO 0)
         );    

@@ -17,35 +17,37 @@ component fetch IS
            pc_mem,Rdst_buf_ie_im,Rdst : IN std_logic_vector(15 DOWNTO 0);
           counter: IN std_logic_vector(2 DOWNTO 0);
 counter_RT: IN std_logic_vector(1 DOWNTO 0);
-            ir_fetch,ir_buf,pc_call: out std_logic_vector(15 DOWNTO 0)
+            ir_fetch,ir_buf,pc_call,pc_to_int: out std_logic_vector(15 DOWNTO 0)
            ); 
 		
 END component;
 
 
-
-component  Decode IS
+component Decode IS
 	Generic (m : integer :=16);
 	port (	clk,rst: in std_logic ;
 		IR_Buff , write_data_Rdst, Exec_Result_H , IR,PC_Call:in std_logic_vector (m-1 downto 0);
 		Rdst_add_IM_IW, Rsrc_add_IM_IW: in std_logic_vector(2 downto 0);
 		write_en_Rsrc_IM_IW,write_en_Rdst_IM_IW ,Imm_control_signal , JMP_cond , Stall_LD : in std_logic;
 		
+		 Rsrc_Buff_in,Rdst_Buff_in   : in std_logic_vector(m-1 downto 0 );
+
 		-- from CU 
 		RTI_sig,SETC_sig,CLRC_sig,SETC_or_CLRC_sig,en_exec_result_sig : in std_logic;
 		ALU_op_ctrl : in std_logic_vector (3 downto 0);
 		write_en_Rsrc,write_en_Rdst,inc_SP,en_SP,en_mem_write,out_en_reg,S1_WB,S0_WB: in std_logic;
+
 	
 		write_en_Rsrc_ID_IE,write_en_Rdst_ID_IE,inc_SP_ID_IE,en_SP_ID_IE,en_mem_write_ID_IE,out_en_reg_ID_IE,S1_WB_ID_IE,S0_WB_ID_IE: out std_logic;
 		RTI_sig_ID_IE,SETC_sig_ID_IE,CLRC_sig_ID_IE,SETC_or_CLRC_sig_ID_IE,en_exec_result_sig_ID_IE : out std_logic;
 		ALU_op_ctrl_ID_IE : out std_logic_vector (3 downto 0);
 		-- end out CU signals 
-		
+		Rsrc_out_RegFile,Rdst_out_RegFile	: out std_logic_vector(m-1 downto 0 );
 		Rsrc_buff_ID_IE , Rdst_buff_ID_IE , IR_Immediate_ID_IE ,PC_Call_ID_IE,ReadinFetch_dataBus: out std_logic_vector(m-1 downto 0 );
 		Rsrc_add_ID_IE,Rdst_add_ID_IE: out std_logic_vector (2 downto 0);
 		Imm_buff_ID_IE: out std_logic
 		);
-END component ;
+end component;
 
 component  execute is
 generic ( n : integer := 16);  
@@ -115,27 +117,24 @@ GENERIC ( n : integer := 16);
         counterRTout:OUT std_logic_vector (1 downto 0));    
 END component;
 
-
 component forwardingUnit IS 
 GENERIC ( n : integer := 16); 
-		PORT (	IR,IRBuff : IN std_logic_vector(n-1 DOWNTO 0);
-				rSrcAddress_DE,rSrcAddress_EM,rDstAddress_DE,rDstAddress_EM :IN std_logic_vector(2 DOWNTO 0);
-				writeEnrSrcDE,writeEnrDstDE,writeEnrRsrcEM,writeEnrDstEM,twoOp:IN std_logic;
-                memReadEM,memReadMW:  IN std_logic;
-                MulDE,RtypeDE,Clk:  IN std_logic;
-				rSrc,rDst : IN std_logic_vector(n-1 DOWNTO 0);
-				execResultHigh,execResultLow,memoryResult : IN std_logic_vector(n-1 DOWNTO 0);
-				execResultLowSelSrc,forwardSelSrc:  IN std_logic;
-				execResultLowSelDst,forwardSelDst:  IN std_logic;
-				rSrcBuf,rDstBuf : OUT std_logic_vector(n-1 DOWNTO 0); 
-				stallLD,stallLDBuff,delayJmp: OUT std_logic);       
+		PORT (IR,IRBuff : IN std_logic_vector(n-1 DOWNTO 0);
+		rSrcAddress_DE,rSrcAddress_EM,rDstAddress_DE,rDstAddress_EM :IN std_logic_vector(2 DOWNTO 0);
+		writeEnrSrcDE,writeEnrDstDE,writeEnrDstEM,twoOp:IN std_logic;
+		memReadEM,memReadMW:  IN std_logic;
+		MulDE,RtypeDE,Clk:  IN std_logic;
+		rSrc,rDst : IN std_logic_vector(n-1 DOWNTO 0);
+		execResultHigh,execResultLow,memoryResult : IN std_logic_vector(n-1 DOWNTO 0);
+		rSrcBuf,rDstBuf : OUT std_logic_vector(n-1 DOWNTO 0); 
+		stallLD,stallLDBuff,delayJmp: OUT std_logic);       
 END component;
 
 component intCircuit IS 
 GENERIC ( n : integer := 16); 
         PORT (pc : IN std_logic_vector(n-1 DOWNTO 0);
        int,stallLD,clk,rstHard:IN std_logic;      
-        pcINTEn,intEn,excINT,selINTPC,flagBuffEn : OUT std_logic;
+        intEn,excINT,selINTPC,flagBuffEn : OUT std_logic;
         counterIntout:OUT std_logic_vector (2 downto 0);
         pcINTOut: OUT std_logic_vector(n-1 DOWNTO 0)
         );    
@@ -170,7 +169,7 @@ END component;
 	signal 	RTI_sig_ID_IE,SETC_sig_ID_IE,CLRC_sig_ID_IE,SETC_or_CLRC_sig_ID_IE,en_exec_result_sig_ID_IE :  std_logic;
 	signal 	ALU_op_ctrl_ID_IE_sig :  std_logic_vector (3 downto 0);
 	
-	signal STD_IE_IM_sig,PUSH_IE_IM_sig,exc_int_IE_IM_sig,en_mem_wr_IE_IM_sig,
+	signal STD_IE_IM_sig,PUSH_IE_IM_sig,exc_int_sig,en_mem_wr_IE_IM_sig,
 	inc_sp_IE_IM_sig,en_sp_IE_IM_sig,s1_wb_IE_IM_sig,so_wb_IE_IM_sig,out_en_reg_IE_IM_sig,
 	s1_IM_IW_sig,so_IM_IW_sig,out_en_reg_IM_IW_sig : std_logic;
 	
@@ -189,15 +188,29 @@ END component;
 
 	signal flag_reg_sig:std_logic_vector(3 downto 0);
         signal delay_jmp_ID_IE_sig,twoOp_cu_sig:std_logic;
+        
+        -------------------------------------------------------------
+        signal pc_to_int_sig: std_logic_vector (15 downto 0);
+		-----------------------------Fatema------------mem_read_IE_IM_sig,mem_read_IM_IW_sig-------------
+		signal Rsrc_buf_FU,Rdst_buf_FU,rsrc_data,rdst_data:std_logic_vector(15 downto 0);
+		signal Stall_LD_buf_FU_sig,mul_ID_IE,rtype_ID_IE,Exec_Result_H_sig,Exec_Result_L_si
+		,mem_read_IE_IM_sig,mem_read_IM_IW_sig:std_logic;
+		------------------------------------------------
 		
 
      
 	
 BEGIN
 
+ 
+
+int_cir:intCircuit port map(pc_to_int_sig,INTERUPT,stallLD_fu_sig,Clk,Rst,Int_en_int_cir_sig,exc_int_sig,selINTPC_int_cir_sig,en_flag_buf_sig_INT
+,counter_sig,pc_int_int_cir);
+
+
 
 f:fetch port map(Clk,Rst,Int_en_int_cir_sig,offsetSel_cu_sig,delayJMP_fu_sig,RTI_cu_sig,
-	RET_cu_sig,selINTPC_int_cir_sig,stallLD_fu_sig,jmpCond_cu_sig,imm_cu_sig,pc_mem_m_sig,Rdst_buf_IE_IM_sig , Rdst_dec_sig ,counter_sig,counter_RT_sig,ir_fetch_sig,ir_buf_ID_IF_sig,pc_call_ID_IF_sig );
+	RET_cu_sig,selINTPC_int_cir_sig,stallLD_fu_sig,jmpCond_cu_sig,imm_cu_sig,pc_mem_m_sig,Rdst_buf_IE_IM_sig , Rdst_dec_sig ,counter_sig,counter_RT_sig,ir_fetch_sig,ir_buf_ID_IF_sig,pc_call_ID_IF_sig ,pc_to_int_sig);
 
 CU:controlUnit port map(ir_fetch_sig,ir_buf_ID_IF_sig,flag_reg_sig,Clk,Rst,stallLD_fu_sig,delay_jmp_ID_IE_sig,JMP_cond_CU_sig, 
 offsetSel_cu_sig,twoOp_cu_sig,inc_SP_CU_sig,en_SP_CU_sig,en_mem_write_CU_sig,LDD_or_pop_CU_sig,SETC_or_CLRC_CU_sig,
@@ -206,27 +219,22 @@ imm_cu_sig,write_en_Rdst_CU_sig,en_exec_result_CU_sig,write_en_Rsrc_CU_sig,out_e
 		RTI_cu_sig,PUSH_cu_sig,STD_cu_sig,counter_RT_sig);
 
 
+FU: forwardingUnit port map(ir_fetch_sig,ir_buf_ID_IF_sig,Rsrc_add_ID_IE_sig,Rsrc_add_IE_IM_sig,Rdst_add_ID_IE_sig,Rdst_add_IE_IM_sig,
+write_en_Rsrc_ID_IE_sig,write_en_Rdst_ID_IE_sig,write_en_Rdst_IE_IM_sig,twoOp_cu_sig,
+mem_read_IE_IM_sig,mem_read_IM_IW_sig,mul_ID_IE,rtype_ID_IE,Clk,rsrc_data,rdst_data,
+Exec_Result_H_IE_IM_sig,Exec_Result_L_IE_IM_sig,mem_result_IM_IW_sig,Rsrc_buf_FU,Rdst_buf_FU,Stall_LD_FU_sig,Stall_LD_buf_FU_sig,delay_jmp_ID_IE_sig);
+
+
 D: Decode Generic map (m=>16) port map (Clk,Rst,ir_buf_ID_IF_sig,write_data_Rdst_WB_sig, Exec_Result_H_IM_IW_sig,ir_fetch_sig,
 pc_call_ID_IF_sig,Rdst_add_IM_IW_sig, Rsrc_add_IM_IW_sig,write_en_Rsrc_IM_IW_sig,write_en_Rdst_IM_IW_sig,imm_cu_sig,
-JMP_cond_CU_sig , Stall_LD_FU_sig,RTI_cu_sig,SETC_CU_sig,CLRC_CU_sig,SETC_or_CLRC_CU_sig,en_exec_result_CU_sig,
+JMP_cond_CU_sig , Stall_LD_FU_sig,Rsrc_buf_FU,Rdst_buf_FU,RTI_cu_sig,SETC_CU_sig,CLRC_CU_sig,SETC_or_CLRC_CU_sig,en_exec_result_CU_sig,
 ALU_op_ctrl_CU_sig,write_en_Rsrc_CU_sig,write_en_Rdst_CU_sig,inc_SP_CU_sig,en_SP_CU_sig,en_mem_write_CU_sig,
 out_en_reg_CU_sig,S1_WB_CU_sig,S0_WB_CU_sig,write_en_Rsrc_ID_IE_sig,write_en_Rdst_ID_IE_sig,inc_SP_ID_IE_sig,
 en_SP_ID_IE_sig,en_mem_write_ID_IE_sig,out_en_reg_ID_IE_sig,S1_WB_ID_IE_sig,
 S0_WB_ID_IE_sig,RTI_sig_ID_IE,SETC_sig_ID_IE,CLRC_sig_ID_IE,SETC_or_CLRC_sig_ID_IE,en_exec_result_sig_ID_IE,	
-ALU_op_ctrl_ID_IE_sig,Rsrc_buff_ID_IE_sig,Rdst_buff_ID_IE_sig,IR_Immediate_ID_IE_sig,PC_Call_ID_IE_sig,Rdst_dec_sig,
+ALU_op_ctrl_ID_IE_sig,rsrc_data,rdst_data,Rsrc_buff_ID_IE_sig,Rdst_buff_ID_IE_sig,IR_Immediate_ID_IE_sig,PC_Call_ID_IE_sig,Rdst_dec_sig,
 Rsrc_add_ID_IE_sig,Rdst_add_ID_IE_sig,Imm_buff_ID_IE_sig);
 
-
-
-
-
-M: memory port map(Clk,Rst,Int_en_int_cir_sig,STD_IE_IM_sig,PUSH_IE_IM_sig,exc_int_IE_IM_sig,en_mem_wr_IE_IM_sig,selINTPC_int_cir_sig,en_sp_IE_IM_sig,
-inc_sp_IE_IM_sig,en_sp_IE_IM_sig,s1_wb_IE_IM_sig,so_wb_IE_IM_sig,out_en_reg_IE_IM_sig,write_en_Rdst_IE_IM_sig,write_en_Rsrc_IE_IM_sig
-,pc_call_IE_IM_sig,pc_int_int_cir,Rdst_buf_IE_IM_sig,immediate_IE_IM_sig,
-Exec_Result_H_IE_IM_sig,Exec_Result_L_IE_IM_sig,Rsrc_add_IE_IM_sig,Rdst_add_IE_IM_sig,mem_result_IM_IW_sig,pc_mem_m_sig,immediate_IM_IW_sig,Rdst_buf_IM_IW_sig,
-Exec_Result_H_IM_IW_sig,Exec_Result_L_IM_IW_sig,Rsrc_add_IM_IW_sig,Rdst_add_IM_IW_sig,s1_IM_IW_sig,so_IM_IW_sig,out_en_reg_IM_IW_sig,
-write_en_Rdst_IM_IW_sig,write_en_Rsrc_IM_IW_sig
-);
 
 
 E: execute port map (Clk,Rst,RTI_cu_sig,SETC_CU_sig,CLRC_CU_sig,SETC_or_CLRC_CU_sig,en_flag_buf_sig_INT,
@@ -237,6 +245,14 @@ write_en_Rsrc_IE_IM_sig,write_en_Rdst_IE_IM_sig,inc_sp_IE_IM_sig,en_sp_IE_IM_sig
 out_en_reg_IE_IM_sig,s1_IM_IW_sig,so_IM_IW_sig,Rdst_add_IE_IM_sig,Rsrc_add_IE_IM_sig,pc_call_IE_IM_sig,
 Rdst_buf_IE_IM_sig,Rsrc_buf_IE_IM_sig,immediate_IE_IM_sig,Exec_Result_H_IE_IM_sig,Exec_Result_L_IE_IM_sig,flag_reg_sig);
 
+
+M: memory port map(Clk,Rst,Int_en_int_cir_sig,STD_IE_IM_sig,PUSH_IE_IM_sig,exc_int_sig,en_mem_wr_IE_IM_sig,selINTPC_int_cir_sig,en_sp_IE_IM_sig,
+inc_sp_IE_IM_sig,en_sp_IE_IM_sig,s1_wb_IE_IM_sig,so_wb_IE_IM_sig,out_en_reg_IE_IM_sig,write_en_Rdst_IE_IM_sig,write_en_Rsrc_IE_IM_sig
+,pc_call_IE_IM_sig,pc_int_int_cir,Rdst_buf_IE_IM_sig,immediate_IE_IM_sig,
+Exec_Result_H_IE_IM_sig,Exec_Result_L_IE_IM_sig,Rsrc_add_IE_IM_sig,Rdst_add_IE_IM_sig,mem_result_IM_IW_sig,pc_mem_m_sig,immediate_IM_IW_sig,Rdst_buf_IM_IW_sig,
+Exec_Result_H_IM_IW_sig,Exec_Result_L_IM_IW_sig,Rsrc_add_IM_IW_sig,Rdst_add_IM_IW_sig,s1_IM_IW_sig,so_IM_IW_sig,out_en_reg_IM_IW_sig,
+write_en_Rdst_IM_IW_sig,write_en_Rsrc_IM_IW_sig
+);
 
 
 

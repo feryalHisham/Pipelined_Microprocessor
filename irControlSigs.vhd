@@ -7,7 +7,7 @@ GENERIC ( n : integer := 16);
         twoOp,incSp,enSP ,enMemWr,lddORpop,setcORclrc,
         imm,wrEnRdst,enExecRes,wrEnRsrc,outEnReg,
         alu1,alu2,alu3,alu4,s1Wb,s0Wb,
-        RET,RTI,PUSH,STD : OUT std_logic);    
+        RET,RTI,PUSH,STD,SETC,CLRC : OUT std_logic);    
 END ENTITY irSignals;
 
 
@@ -97,6 +97,12 @@ BEGIN
     else '0';
 
     setcORclrc <='1' when IRBuff(15 downto 9) = setcOp or  IRBuff(15 downto 9) = clrcOp
+    else '0';
+
+    SETC <='1' when IRBuff(15 downto 9) = setcOp 
+    else '0';
+
+    CLRC <='1' when  IRBuff(15 downto 9) = clrcOp
     else '0';
 
 

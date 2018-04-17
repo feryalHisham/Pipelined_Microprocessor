@@ -6,15 +6,35 @@ Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Compiling entity R_type_component
 -- Compiling architecture toBuff of R_type_component
 
-} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd}
+} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/forwardDetect.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/forwardDetect.vhd}
+Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity forwardDetect
+-- Compiling architecture forwarding of forwardDetect
+
+} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd} {0 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd}
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity pipeline
 -- Compiling architecture a_pipeline of pipeline
+** Error: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd(221): (vcom-1136) Unknown identifier "mem_read_IE_IM_sig".
+** Error: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd(221): (vcom-1136) Unknown identifier "mem_read_IM_IW_sig".
+** Error: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd(221): Signal "rsrc_data" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+** Error: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd(221): Signal "rdst_data" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+** Error: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd(222): (vcom-1136) Unknown identifier "Rsrc_buf_FU".
+** Error: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd(222): (vcom-1136) Unknown identifier "Rdst_buf_FU".
+** Error: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd(230): (vcom-1136) Unknown identifier "Rsrc_buf_FU".
+** Error: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd(230): (vcom-1136) Unknown identifier "Rdst_buf_FU".
+** Error: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd(235): Signal "rsrc_data" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+** Error: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd(235): Signal "rdst_data" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+** Error: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd(219): (vcom-1272) Length of formal "rSrcAddress_EM" is 3; length of actual is 16.
+** Error: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd(267): VHDL Compiler exiting
 
-} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/mux4.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/mux4.vhd}
+} {8.0 20.0} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/mux4.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/mux4.vhd}
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -30,22 +50,6 @@ Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Compiling entity jmpOffset
 -- Compiling architecture offset of jmpOffset
 
-} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/forwardDetect.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/forwardDetect.vhd}
-Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity forwardDetect
--- Compiling architecture forwarding of forwardDetect
-
-} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/register2.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/register2.vhd}
-Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity my_nDFF3
--- Compiling architecture a_my_nDFF3 of my_nDFF3
-
 } {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fetch_module.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fetch_module.vhd}
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package STANDARD
@@ -56,6 +60,22 @@ Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity fetch
 -- Compiling architecture fetchh of fetch
+
+} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/register2.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/register2.vhd}
+Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity my_nDFF3
+-- Compiling architecture a_my_nDFF3 of my_nDFF3
+
+} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/alu_integ.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/alu_integ.vhd}
+Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity alu_integ
+-- Compiling architecture alu_integ_arch of alu_integ
 
 } {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/comparing.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/comparing.vhd}
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
@@ -100,13 +120,13 @@ Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Compiling entity mux_2x1_1_bit
 -- Compiling architecture mux_2x1_1_bit_a of mux_2x1_1_bit
 
-} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/alu_integ.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/alu_integ.vhd}
+} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/register_falling.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/register_falling.vhd}
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity alu_integ
--- Compiling architecture alu_integ_arch of alu_integ
+-- Compiling entity my_nDFF_fall
+-- Compiling architecture a_my_nDFF_fall of my_nDFF_fall
 
 } {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/alu_partA.vhd} {2 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/alu_partA.vhd}
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
@@ -120,25 +140,6 @@ Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Compiling architecture alu_partA_arch of alu_partA
 ** Warning: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/alu_partA.vhd(36): (vcom-1074) Non-locally static OTHERS choice is allowed only if it is the only choice of the only association.
 
-} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/register_falling.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/register_falling.vhd}
-Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity my_nDFF_fall
--- Compiling architecture a_my_nDFF_fall of my_nDFF_fall
-
-} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/alu_partB.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/alu_partB.vhd}
-Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity alu_partB
--- Compiling architecture alu_partB_arch of alu_partB
-
 } {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/counterINT.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/counterINT.vhd}
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package STANDARD
@@ -148,33 +149,6 @@ Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Compiling entity counterINT
 -- Compiling architecture Behavioral of counterINT
 
-} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/alu_partC.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/alu_partC.vhd}
-Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity alu_partC
--- Compiling architecture alu_partC_arch of alu_partC
-
-} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/forwardingUnit.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/forwardingUnit.vhd}
-Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity forwardingUnit
--- Compiling architecture forwardUnit of forwardingUnit
-
-} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/tristateBuff.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/tristateBuff.vhd}
-Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity tristatebuff
--- Compiling architecture a_tristatebuff of tristatebuff
-
 } {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Decode.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Decode.vhd}
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package STANDARD
@@ -182,22 +156,6 @@ Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package std_logic_1164
 -- Compiling entity Decode
 -- Compiling architecture my_Decode of Decode
-
-} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/mux2_1.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/mux2_1.vhd}
-Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity mux2_1
--- Compiling architecture mux2_1_a of mux2_1
-
-} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Decoder_8.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Decoder_8.vhd}
-Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity my_dec8
--- Compiling architecture a_my_dec8 of my_dec8
 
 } {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/circuitINT.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/circuitINT.vhd}
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
@@ -216,5 +174,21 @@ Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package NUMERIC_STD
 -- Compiling entity counter
 -- Compiling architecture Behavioral of Counter
+
+} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/controlUnit.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/controlUnit.vhd}
+Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity controlUnit
+-- Compiling architecture controlU of controlUnit
+
+} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/irControlSigs.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/irControlSigs.vhd}
+Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity irSignals
+-- Compiling architecture controlIR of irSignals
 
 } {} {}}

@@ -11,7 +11,7 @@ ENTITY fetch IS
            pc_mem,Rdst_buf_ie_im,Rdst : IN std_logic_vector(15 DOWNTO 0);
           counter: IN std_logic_vector(2 DOWNTO 0);
 counter_RT: IN std_logic_vector(1 DOWNTO 0);
-            ir_fetch,ir_buf,pc_call: out std_logic_vector(15 DOWNTO 0)
+            ir_fetch,ir_buf,pc_call,pc_to_int: out std_logic_vector(15 DOWNTO 0)
            ); 
 		
 END fetch;
@@ -82,6 +82,7 @@ counter_rt_1_2 <= ( not(counter_RT(1)) and (counter_RT(0)))
 
 en_pc <= stall_ld nor (Int_en and counter_0_1_2_3 );
 pc: my_nDFF2 port map(Clk,'0',en_pc,pc_in,pc_out);
+pc_to_int<=pc_out;
 pc_mux1_s<= int_pc_sel or Reset or RET or RTI;
 
 pc_mux1: mux2_1 port map(pc_mux2_out,pc_mem,pc_mux1_s,pc_in);
