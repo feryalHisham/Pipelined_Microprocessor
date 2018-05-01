@@ -6,7 +6,7 @@ use ieee.std_logic_unsigned.all;
 entity execute is
 generic ( n : integer := 16);  
 
-PORT ( Clk,mem_read_in,RESET,RTI_sig,SETC_sig,CLRC_sig,SETC_or_CLRC_sig,en_flag_buf_sig,en_exec_result_sig: in std_logic;
+PORT ( Clk,RESET,mem_read_in,RTI_sig,SETC_sig,CLRC_sig,SETC_or_CLRC_sig,en_flag_buf_sig,en_exec_result_sig: in std_logic;
 
 	
 	Rdst_buf_in,Rsrc_buf_in,immediate_val_in: in std_logic_vector(n-1 downto 0); --pass it also 
@@ -15,13 +15,14 @@ PORT ( Clk,mem_read_in,RESET,RTI_sig,SETC_sig,CLRC_sig,SETC_or_CLRC_sig,en_flag_
 	-------------------------------------------------------------
 
 	--pass these control signals 
-	write_en_Rsrc_in,write_en_Rdst_in,inc_SP_in,en_SP_in,en_mem_write_in,out_en_reg_in,S1_WB_in,S0_WB_in: in std_logic;
+	write_en_Rsrc_in,write_en_Rdst_in,inc_SP_in,en_SP_in,en_mem_write_in,out_en_reg_in,S1_WB_in,S0_WB_in,PUSH_sig,STD_sig: in std_logic;
 	--pass these registers 
 	Rdst_add_in,Rsrc_add_in: in std_logic_vector (2 downto 0); 
 	PC_call_in: in std_logic_vector (n-1 downto 0);
 
 	-- outputs of IE_IM buffer
-	mem_read_IE_IM,write_en_Rsrc_IE_IM,write_en_Rdst_IE_IM,inc_SP_IE_IM,en_SP_IE_IM,en_mem_write_IE_IM,out_en_reg_IE_IM,S1_WB_IE_IM,S0_WB_IE_IM:out std_logic;
+	mem_read_IE_IM,write_en_Rsrc_IE_IM,write_en_Rdst_IE_IM,inc_SP_IE_IM,en_SP_IE_IM,
+	en_mem_write_IE_IM,out_en_reg_IE_IM,S1_WB_IE_IM,S0_WB_IE_IM,PUSH_IE_IM,STD_IE_IM:out std_logic;
 	
 	
 	Rdst_add_IE_IM,Rsrc_add_IE_IM: out std_logic_vector (2 downto 0); 
@@ -106,6 +107,8 @@ control_sig6: my_DFF generic map (n=>1) port map (Clk,RESET,'1',mem_read_in,mem_
 control_sig8: my_DFF generic map (n=>1) port map (Clk,RESET,'1',out_en_reg_in,out_en_reg_IE_IM);
 control_sig9: my_DFF generic map (n=>1) port map (Clk,RESET,'1',S1_WB_in,S1_WB_IE_IM);
 control_sig10: my_DFF generic map (n=>1) port map (Clk,RESET,'1',S0_WB_in,S0_WB_IE_IM);
+control_sig11: my_DFF generic map (n=>1) port map (Clk,RESET,'1',STD_sig,STD_IE_IM);
+control_sig12: my_DFF generic map (n=>1) port map (Clk,RESET,'1',PUSH_sig,PUSH_IE_IM);
 
 
 

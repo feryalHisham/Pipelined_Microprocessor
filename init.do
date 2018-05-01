@@ -1,3 +1,4 @@
+vsim work.pipeline
 add wave -position end sim:/pipeline/*
 force -freeze sim:/pipeline/Rst 0 0
 mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/FRam.mem} /pipeline/f/ramm/ram

@@ -25,7 +25,7 @@ PORT( Clk,Rst,enb : IN std_logic;
 		   q : OUT std_logic_vector(n-1 DOWNTO 0));
 end component;
 
-component my_nDFF2 
+component my_nDFF_fall 
 GENERIC ( n : integer := 16);
 PORT( Clk,Rst,enb : IN std_logic;
 		   d : IN std_logic_vector(n-1 DOWNTO 0);
@@ -58,7 +58,7 @@ END component;
 
 signal pc_out,pc_in,pc_mux2_out,pc_mux3_out,ir,pc_inc : std_logic_vector(15 DOWNTO 0);
 signal en_pc,counter_0_1_2_3,counter_1_2_3,counter_rt_1_2,pc_mux1_s,pc_mux2_s,pc_mux3_s,jmp_ir,call_ir,rst_ir_buf,rst_pcc_cal  : std_logic;
-
+signal ir_buf_en:std_logic; --fatema
 SIGNAL Clk2 :  std_logic;
 CONSTANT timestep : time :=70 ps;
 
@@ -66,7 +66,7 @@ BEGIN
 
   
 
-ramm: ram port map (Clk,'0',pc_out(8 downto 0),"0000000000000000",ir);
+ramm: ram port map (Clk,Reset,pc_out(8 downto 0),"0000000000000000",ir);
 ir_fetch <= ir;
 counter_0_1_2_3 <= (not(counter(2)) and not(counter(1)) and not(counter(0)))
                   or counter_1_2_3 ;
@@ -80,7 +80,7 @@ counter_rt_1_2 <= ( not(counter_RT(1)) and (counter_RT(0)))
 
 
 en_pc <= stall_ld nor (Int_en and counter_0_1_2_3 );
-pc: my_nDFF2 port map(Clk,'0',en_pc,pc_in,pc_out);
+pc: my_nDFF_fall port map(Clk,Reset,en_pc,pc_in,pc_out);
 pc_to_int<=pc_out;
 pc_mux1_s<= int_pc_sel or Reset or RET or RTI;
 
@@ -95,7 +95,8 @@ pc_mux3: mux2_1 port map(Rdst_buf_ie_im,Rdst,pc_mux3_s,pc_mux3_out);
 
 rst_ir_buf <= counter_1_2_3 or counter_rt_1_2 or jmp_cond or imm_buf or Reset;
 rst_pcc_cal <= jmp_cond or Reset;
-irr_buf: my_nDFF2 port map(Clk,rst_ir_buf,"not"(stall_ld),ir,ir_buf);
+ir_buf_en<= "not"(stall_ld) or Reset;
+irr_buf: my_nDFF_fall port map(Clk,rst_ir_buf,"not"(stall_ld),ir,ir_buf);
 pcc_call: my_nDFF port map(Clk,rst_pcc_cal,'1',pc_inc,pc_call);
 
 
