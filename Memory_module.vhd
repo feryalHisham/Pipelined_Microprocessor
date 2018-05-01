@@ -8,7 +8,7 @@ use ieee.std_logic_unsigned.all;
 ENTITY memory IS
 	
 	port (Clk : IN std_logic;
-              Reset,int_en,std,push,exc_int,en_mem_wr,int_pc_sel,sp_address,inc_sp,en_sp: in std_logic;
+              Reset,mem_read_IE_IM,int_en,std,push,exc_int,en_mem_wr,int_pc_sel,sp_address,inc_sp,en_sp: in std_logic;
             s1_wb_ie_im,so_wb_ie_im,out_en_reg_ie_im,en_write_Rdst_IE_IM,en_write_Rsrc_IE_IM: in std_logic;
            pc_call,pc_int,Rdst_buf_ie_im,immediate_ie_m,Exc_result_H_IE_IM,Exc_result_L_IE_IM: IN std_logic_vector(15 DOWNTO 0);
 
@@ -16,13 +16,12 @@ ENTITY memory IS
 
             mem_result,pc_mem,immediate_im_iw,Rdst_buf_im_iw,Exc_result_H_IM_IW,Exc_result_L_IM_IW: out std_logic_vector(15 DOWNTO 0);
             Rsrc_add_im_iw,Rdst_add_im_iw: out std_logic_vector(2 DOWNTO 0);
-             s1_wb,so_wb,out_en_reg_im_iw,en_write_Rdst_IM_IW,en_write_Rsrc_IM_IW: out std_logic
+             s1_wb,so_wb,out_en_reg_im_iw,en_write_Rdst_IM_IW,en_write_Rsrc_IM_IW,mem_read_IM_IW: out std_logic
            ); 
 		
 END memory;
 
 ARCHITECTURE memoryy OF memory IS
-	-- TODO: Your implementation Here.
 
 component my_nDFF 
 GENERIC ( n : integer := 16);
@@ -117,6 +116,8 @@ s0_wbb: my_DFF port map(so_wb_ie_im,Clk,Reset,'1', so_wb);
 
 --out_en_reg_im_iw <= out_en_reg_ie_im;
 out_en_reg_im_iww: my_DFF port map(out_en_reg_ie_im,Clk,Reset,'1', out_en_reg_im_iw );
+
+mem_read_reg_im_iw: my_DFF port map(mem_read_IE_IM,Clk,Reset,'1', mem_read_IM_IW );
 
 exc_h:my_nDFF port map(Clk,Reset,'1',Exc_result_H_IE_IM, Exc_result_H_IM_IW);
 exc_l:my_nDFF port map(Clk,Reset,'1',Exc_result_L_IE_IM, Exc_result_L_IM_IW);

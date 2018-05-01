@@ -6,7 +6,7 @@ use ieee.std_logic_unsigned.all;
 entity execute is
 generic ( n : integer := 16);  
 
-PORT ( Clk,RESET,RTI_sig,SETC_sig,CLRC_sig,SETC_or_CLRC_sig,en_flag_buf_sig,en_exec_result_sig: in std_logic;
+PORT ( Clk,mem_read_in,RESET,RTI_sig,SETC_sig,CLRC_sig,SETC_or_CLRC_sig,en_flag_buf_sig,en_exec_result_sig: in std_logic;
 
 	
 	Rdst_buf_in,Rsrc_buf_in,immediate_val_in: in std_logic_vector(n-1 downto 0); --pass it also 
@@ -21,7 +21,7 @@ PORT ( Clk,RESET,RTI_sig,SETC_sig,CLRC_sig,SETC_or_CLRC_sig,en_flag_buf_sig,en_e
 	PC_call_in: in std_logic_vector (n-1 downto 0);
 
 	-- outputs of IE_IM buffer
-	write_en_Rsrc_IE_IM,write_en_Rdst_IE_IM,inc_SP_IE_IM,en_SP_IE_IM,SP_address_IE_IM,en_mem_write_IE_IM,out_en_reg_IE_IM,S1_WB_IE_IM,S0_WB_IE_IM:out std_logic;
+	mem_read_IE_IM,write_en_Rsrc_IE_IM,write_en_Rdst_IE_IM,inc_SP_IE_IM,en_SP_IE_IM,en_mem_write_IE_IM,out_en_reg_IE_IM,S1_WB_IE_IM,S0_WB_IE_IM:out std_logic;
 	
 	
 	Rdst_add_IE_IM,Rsrc_add_IE_IM: out std_logic_vector (2 downto 0); 
@@ -100,7 +100,7 @@ control_sig2: my_DFF generic map (n=>1) port map (Clk,RESET,'1',inc_SP_in,inc_SP
 control_sig3: my_DFF generic map (n=>1) port map (Clk,RESET,'1',en_SP_in,en_SP_IE_IM);
 --control_sig4: my_DFF generic map (n=>1) port map (Clk,RESET,'1',SP_address_in,SP_address_IE_IM);
 control_sig5: my_DFF generic map (n=>1) port map (Clk,RESET,'1',en_mem_write_in,en_mem_write_IE_IM);
---control_sig6: my_DFF generic map (n=>1) port map (Clk,RESET,'1',mem_read_in,mem_read_IE_IM);
+control_sig6: my_DFF generic map (n=>1) port map (Clk,RESET,'1',mem_read_in,mem_read_IE_IM);
 
 --control_sig7: my_DFF generic map (n=>1) port map (Clk,RESET,'1',LDD_or_pop_in,LDD_or_pop_IE_IM);
 control_sig8: my_DFF generic map (n=>1) port map (Clk,RESET,'1',out_en_reg_in,out_en_reg_IE_IM);

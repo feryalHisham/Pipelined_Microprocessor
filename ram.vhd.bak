@@ -27,7 +27,7 @@ ARCHITECTURE syncrama OF ram IS
   --509     => X"0006",
   --510     => X"0007",
    --511     => X"0008",
-  OTHERS => X"0000"
+  --OTHERS => X"00FF"
 );
 
 	BEGIN
@@ -41,4 +41,3 @@ ARCHITECTURE syncrama OF ram IS
 		END PROCESS;
 		dataout <= ram(to_integer(unsigned(address)));
 END syncrama;
-

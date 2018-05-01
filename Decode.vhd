@@ -12,12 +12,12 @@ entity Decode IS
 		 Rsrc_Buff_in,Rdst_Buff_in   : in std_logic_vector(m-1 downto 0 );
 
 		-- from CU 
-		RTI_sig,SETC_sig,CLRC_sig,SETC_or_CLRC_sig,en_exec_result_sig : in std_logic;
+		mem_read_sig,RTI_sig,SETC_sig,CLRC_sig,SETC_or_CLRC_sig,en_exec_result_sig : in std_logic;
 		ALU_op_ctrl : in std_logic_vector (3 downto 0);
 		write_en_Rsrc,write_en_Rdst,inc_SP,en_SP,en_mem_write,out_en_reg,S1_WB,S0_WB: in std_logic;
 
 	
-		write_en_Rsrc_ID_IE,write_en_Rdst_ID_IE,inc_SP_ID_IE,en_SP_ID_IE,en_mem_write_ID_IE,out_en_reg_ID_IE,S1_WB_ID_IE,S0_WB_ID_IE: out std_logic;
+		mem_read_sig_ID_IE,write_en_Rsrc_ID_IE,write_en_Rdst_ID_IE,inc_SP_ID_IE,en_SP_ID_IE,en_mem_write_ID_IE,out_en_reg_ID_IE,S1_WB_ID_IE,S0_WB_ID_IE: out std_logic;
 		RTI_sig_ID_IE,SETC_sig_ID_IE,CLRC_sig_ID_IE,SETC_or_CLRC_sig_ID_IE,en_exec_result_sig_ID_IE : out std_logic;
 		ALU_op_ctrl_ID_IE : out std_logic_vector (3 downto 0);
 		-- end out CU signals 
@@ -190,6 +190,7 @@ JMP_cond_OR_Stall_LD <= JMP_cond or Stall_LD ;
 
 -- store the signals of the CU 
 
+R_mem_read_sig:			 my_DFF port map (clk,rst,'1',mem_read_sig,mem_read_sig_ID_IE);
 R_RTI_sig:			 my_DFF port map (clk,rst,'1',RTI_sig,RTI_sig_ID_IE);
 R_SETC_sig:   		 my_DFF port map (clk,rst,'1',SETC_sig,SETC_sig_ID_IE);
 R_CLRC_sig: 		 my_DFF port map (clk,rst,'1',CLRC_sig,CLRC_sig_ID_IE);

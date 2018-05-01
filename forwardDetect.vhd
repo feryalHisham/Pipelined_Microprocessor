@@ -8,7 +8,7 @@ GENERIC ( n : integer := 3);
 			rDstAddress_Buff,rDstAddress_DE,rDstAddress_EM,rDstAddress_IR 	:IN std_logic_vector(n-1 DOWNTO 0);
 			writeEnrDstDE,writeEnrDstEM					:IN std_logic;
 			writeEnrSrcDE,twoOperand,forward				:IN std_logic;
-			memReadEM,clk 							:IN std_logic;
+			memReadEM,clk ,hardRst							:IN std_logic;
 			execResultLSrcSel,execResultLDstSel,
 			forwSrc,forwDst,
 			stallLD,stallLDBuff,delayJmp : OUT std_logic);    
@@ -30,19 +30,22 @@ END component;
 --signal execResultLSrcCmp,execResultLDstCmp,memResSrcCmp,memResDstCmp,execResultHSrcCmp,execResultHDstCmp:std_logic;
 signal memResSrcSel,memResDstSel,execResultHSrcSel,execResultHDstSel,execResultLSrcSelSig,execResultLDstSelSig:std_logic;
 signal execResultLDstSel0,memResDstSel0,execResultHDstSel0:std_logic;
-signal rstReg,regRes,regIn:std_logic;
+signal rstReg,regRes,regIn,rstDstRegs,rstSrcRegs:std_logic;
 --signal stallLD,stallLDBuff,delayJmp :std_logic;
 
 BEGIN
+
+	-- rstDstRegs<=hardRst or writeEnrDstDE;
+	-- rstSrcRegs<=hardRst or writeEnrSrcDE;
 	execResultSrcL: comparing_component GENERIC MAP (n=>3) port map (rSrcAddress_Buff,rDstAddress_DE,writeEnrDstDE,twoOperand,execResultLSrcSelSig);--,execResultLSrcCmp);
 
 	execResultDstL: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_Buff,rDstAddress_DE,writeEnrDstDE,'1',execResultLDstSelSig);--,execResultLDstCmp);
 	execResultDstL0: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_IR,rDstAddress_DE,writeEnrDstDE,'1',execResultLDstSel0);--,execResultLDstCmp);
 
-	memResSrcSelL: comparing_component GENERIC MAP (n=>3) port map (rSrcAddress_Buff,rDstAddress_EM,writeEnrDstEM,twoOperand,memResSrcSel);--,memResSrcCmp);
+	memResSrcSelL: comparing_component GENERIC MAP (n=>3) port map (rSrcAddress_Buff,rDstAddress_EM,writeEnrDstDE,twoOperand,memResSrcSel);--,memResSrcCmp);
 
-	memResDstSelL: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_Buff,rDstAddress_EM,writeEnrDstEM,'1',memResDstSel);--,memResDstCmp);
-	memResDstSelL0: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_IR,rDstAddress_EM,writeEnrDstEM,'1',memResDstSel0);--,memResDstCmp);
+	memResDstSelL: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_Buff,rDstAddress_EM,writeEnrDstDE,'1',memResDstSel);--,memResDstCmp);
+	memResDstSelL0: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_IR,rDstAddress_EM,writeEnrDstDE,'1',memResDstSel0);--,memResDstCmp);
 	
 	chooseExecResultSrcL: comparing_component GENERIC MAP (n=>3) port map (rSrcAddress_Buff,rSrcAddress_DE,writeEnrSrcDE,twoOperand,execResultHSrcSel);--,execResultHSrcCmp);
 	
@@ -57,7 +60,7 @@ BEGIN
 	execResultLDstSel<=execResultLDstSelSig;
 	regIn<=(execResultLSrcSelSig or execResultLDstSelSig)and memReadEM;
 	
-	rstReg<=regRes and clk;
+	rstReg<=(regRes and clk)or hardRst;
 	stallLDBuff<=regRes;
 	stallLDBuffL: my_DFF port map(regIn,clk,rstReg,'1',regRes);
 END forwarding;

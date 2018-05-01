@@ -17,8 +17,7 @@ counter_RT: IN std_logic_vector(1 DOWNTO 0);
 END fetch;
 
 ARCHITECTURE fetchh OF fetch IS
-	-- TODO: Your implementation Here.
-
+	
 component my_nDFF 
 GENERIC ( n : integer := 16);
 PORT( Clk,Rst,enb : IN std_logic;

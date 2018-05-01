@@ -7,7 +7,7 @@ GENERIC ( n : integer := 16);
         twoOp,incSp,enSP ,enMemWr,lddORpop,setcORclrc,
         imm,wrEnRdst,enExecRes,wrEnRsrc,outEnReg,
         alu1,alu2,alu3,alu4,s1Wb,s0Wb,
-        RET,RTI,PUSH,STD,SETC,CLRC : OUT std_logic);    
+        RET,RTI,PUSH,STD,SETC,CLRC,memRead : OUT std_logic);    
 END ENTITY irSignals;
 
 
@@ -116,9 +116,9 @@ BEGIN
     or (IRBuff(15 downto 13) = ldmOp(6 downto 4) and tempOutEnReg='0')
     else '0';
 
---    memRead <='1' when IRBuff(15 downto 9) = popOp
---    or IRBuff(15 downto 9) = lddOp
---    else '0';
+   memRead <='1' when IRBuff(15 downto 9) = popOp
+   or IRBuff(15 downto 9) = lddOp
+   else '0';
 
     outEnReg<=tempOutEnReg;
     tempOutEnReg  <='1' when IRBuff(15 downto 9) = outOp
