@@ -183,14 +183,6 @@ Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Compiling entity mux2_1
 -- Compiling architecture mux2_1_a of mux2_1
 
-} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Decode.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Decode.vhd}
-Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity Decode
--- Compiling architecture my_Decode of Decode
-
 } {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Decoder_8.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Decoder_8.vhd}
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package STANDARD
@@ -237,6 +229,17 @@ Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity memory
 -- Compiling architecture memoryy of memory
+
+} {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/execute_module.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/execute_module.vhd}
+Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity execute
+-- Compiling architecture execute_arch of execute
 
 } {} {}} {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/counter.vhd} {1 {vcom -work work -2002 -explicit -stats=none {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/counter.vhd}
 Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014

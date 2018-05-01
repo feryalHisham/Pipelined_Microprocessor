@@ -1365,3 +1365,54 @@ force -freeze sim:/pipeline/Rst 0 0
 run
 
 
+# Compile of irControlSigs.vhd was successful.
+# Compile of controlUnit.vhd was successful.
+# Compile of Decode.vhd was successful.
+# Compile of pipeline.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.pipeline
+# vsim 
+# Start time: 21:23:17 on May 01,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pipeline(a_pipeline)
+# Loading ieee.numeric_std(body)
+# Loading work.intcircuit(circuitint)
+# Loading work.counterint(behavioral)
+# Loading work.my_ndff(a_my_ndff)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.fetch(fetchh)
+# Loading work.ram(syncrama)
+# Loading work.my_ndff_fall(a_my_ndff_fall)
+# Loading work.mux2_1(mux2_1_a)
+# Loading work.controlunit(controlu)
+# Loading work.irsignals(controlir)
+# Loading work.rtcircuit(circuitrt)
+# Loading work.counter(behavioral)
+# Loading work.jmpoffset(offset)
+# Loading work.my_dff(a_my_dff)
+# Loading work.forwardingunit(forwardunit)
+# Loading work.forwarddetect(forwarding)
+# Loading work.comparing_component(comparing)
+# Loading work.comparator(comparing)
+# Loading work.r_type(srcdstrtype)
+# Loading work.r_type_component(tobuff)
+# Loading work.decode(my_decode)
+# Loading work.my_dec8(a_my_dec8)
+# Loading work.tristatebuff(a_tristatebuff)
+# Loading work.execute(execute_arch)
+# Loading work.alu_with_flags(alu_with_flags_arch)
+# Loading work.alu_integ(alu_integ_arch)
+# Loading work.alu_parta(alu_parta_arch)
+# Loading work.my_nadder(a_my_nadder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.alu_partb(alu_partb_arch)
+# Loading work.alu_partc(alu_partc_arch)
+# Loading work.alu_partmul(alu_partmul_arch)
+# Loading work.mux_2x1_1_bit(mux_2x1_1_bit_a)
+# Loading work.memory(memoryy)
+# Loading work.my_ndff_sp(a_my_ndff_sp)
+# Loading work.wb(my_wb)
+# Loading work.mux4(my_mux4)

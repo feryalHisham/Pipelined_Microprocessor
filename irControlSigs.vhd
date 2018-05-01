@@ -7,7 +7,7 @@ GENERIC ( n : integer := 16);
         twoOp,incSp,enSP ,enMemWr,lddORpop,setcORclrc,
         imm,wrEnRdst,enExecRes,wrEnRsrc,outEnReg,
         alu1,alu2,alu3,alu4,s1Wb,s0Wb,
-        RET,RTI,PUSH,STD,SETC,CLRC,memRead : OUT std_logic);    
+        rType,RET,RTI,PUSH,STD,SETC,CLRC,memRead : OUT std_logic);    
 END ENTITY irSignals;
 
 
@@ -75,6 +75,7 @@ BEGIN
 --    or IRBuff(15 downto 9) =jcOp
 --    else '0';
 
+    rType<=IRBuff(13) and not IRBuff(14) and not IRBuff(15);
     tempIncSP<='1' when IRBuff(15 downto 9)= rtiOp
     or IRBuff(15 downto 9) =  retOp
     or IRBuff(15 downto 9) =  popOp

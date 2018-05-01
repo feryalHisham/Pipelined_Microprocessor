@@ -111,7 +111,7 @@ END component;
 
 
 component controlUnit IS 
-GENERIC ( n : integer := 16); 
+GENERIC ( n : integer := 16);  
 	PORT (IR,IRBuff : IN std_logic_vector(n-1 DOWNTO 0);
 	flagReg : IN std_logic_vector(3 DOWNTO 0);
 	clk,rstHard,stallLD,delayJMPDE:in std_logic; 
@@ -120,7 +120,7 @@ GENERIC ( n : integer := 16);
 	twoOp,incSp,enSP ,enMemWr,lddORpop,setcORclrc,
 	imm,wrEnRdst,enExecRes,wrEnRsrc,outEnReg,
 	alu1,alu2,alu3,alu4,s1Wb,s0Wb,
-	RET,RTI,PUSH,STD,SETC,CLRC,memRead: OUT std_logic;
+	RET,RTI,PUSH,STD,SETC,CLRC,memRead,rType: OUT std_logic;
 	counterRTout:OUT std_logic_vector (1 downto 0));     
 END component;
 
@@ -200,7 +200,7 @@ END component;
         signal pc_to_int_sig: std_logic_vector (15 downto 0);
 		-----------------------------Fatema------------mem_read_IE_IM_sig,mem_read_IM_IW_sig-------------
 		signal Rsrc_buf_FU,Rdst_buf_FU,rsrc_data,rdst_data:std_logic_vector(15 downto 0);
-		signal Stall_LD_buf_FU_sig,mul_ID_IE,rtype_ID_IE,Exec_Result_H_sig,Exec_Result_L_si
+		signal Stall_LD_buf_FU_sig,mul_ID_IE,rtype_cu_sig,rtype_ID_IE,Exec_Result_H_sig,Exec_Result_L_si
 		,mem_read_IE_IM_sig,mem_read_IM_IW_sig:std_logic;
 		------------------------------------------------
 		
@@ -223,7 +223,7 @@ CU:controlUnit port map(ir_fetch_sig,ir_buf_ID_IF_sig,flag_reg_sig,Clk,Rst,stall
 	offsetSel_cu_sig,twoOp_cu_sig,inc_SP_CU_sig,en_SP_CU_sig,en_mem_write_CU_sig,LDD_or_pop_CU_sig,SETC_or_CLRC_CU_sig,
 	imm_cu_sig,write_en_Rdst_CU_sig,en_exec_result_CU_sig,write_en_Rsrc_CU_sig,out_en_reg_CU_sig,
 	ALU_op_ctrl_CU_sig(3),ALU_op_ctrl_CU_sig(2),ALU_op_ctrl_CU_sig(1),ALU_op_ctrl_CU_sig(0),S1_WB_CU_sig,S0_WB_CU_sig,RET_cu_sig,
-	RTI_cu_sig,PUSH_cu_sig,STD_cu_sig,SETC_CU_sig,CLRC_CU_sig,mem_read_CU_sig,counter_RT_sig);
+	RTI_cu_sig,PUSH_cu_sig,STD_cu_sig,SETC_CU_sig,CLRC_CU_sig,mem_read_CU_sig,rtype_cu_sig,counter_RT_sig);
 
 
 FU: forwardingUnit port map(ir_fetch_sig,ir_buf_ID_IF_sig,Rsrc_add_ID_IE_sig,Rsrc_add_IE_IM_sig,Rdst_add_ID_IE_sig,Rdst_add_IE_IM_sig,

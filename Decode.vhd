@@ -190,7 +190,7 @@ JMP_cond_OR_Stall_LD <= JMP_cond or Stall_LD ;
 
 -- store the signals of the CU 
 
-R_mem_read_sig:			 my_DFF port map (clk,rst,'1',mem_read_sig,mem_read_sig_ID_IE);
+R_mem_read_sig:		 my_DFF port map (clk,rst,'1',mem_read_sig,mem_read_sig_ID_IE);
 R_RTI_sig:			 my_DFF port map (clk,rst,'1',RTI_sig,RTI_sig_ID_IE);
 R_SETC_sig:   		 my_DFF port map (clk,rst,'1',SETC_sig,SETC_sig_ID_IE);
 R_CLRC_sig: 		 my_DFF port map (clk,rst,'1',CLRC_sig,CLRC_sig_ID_IE);
