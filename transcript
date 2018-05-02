@@ -1,1378 +1,26 @@
 # Loading project projectArch
-vsim work.pipeline
-# vsim 
-# Start time: 15:30:10 on May 01,2018
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.pipeline(a_pipeline)
-# Loading ieee.numeric_std(body)
-# Loading work.intcircuit(circuitint)
-# Loading work.counterint(behavioral)
-# Loading work.my_ndff(a_my_ndff)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.fetch(fetchh)
-# Loading work.ram(syncrama)
-# ** Warning: (vsim-3473) Component instance "pc : my_nDFF2" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f File: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fetch_module.vhd
-# Loading work.mux2_1(mux2_1_a)
-# ** Warning: (vsim-3473) Component instance "irr_buf : my_nDFF2" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f File: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fetch_module.vhd
-# Loading work.controlunit(controlu)
-# Loading work.irsignals(controlir)
-# Loading work.rtcircuit(circuitrt)
-# Loading work.counter(behavioral)
-# Loading work.jmpoffset(offset)
-# Loading work.my_dff(a_my_dff)
-# Loading work.forwardingunit(forwardunit)
-# Loading work.forwarddetect(forwarding)
-# Loading work.comparing_component(comparing)
-# Loading work.comparator(comparing)
-# Loading work.r_type(srcdstrtype)
-# Loading work.r_type_component(tobuff)
-# Loading work.decode(my_decode)
-# Loading work.my_dec8(a_my_dec8)
-# Loading work.tristatebuff(a_tristatebuff)
-# Loading work.my_ndff_fall(a_my_ndff_fall)
-# Loading work.execute(execute_arch)
-# Loading work.alu_with_flags(alu_with_flags_arch)
-# Loading work.alu_integ(alu_integ_arch)
-# Loading work.alu_parta(alu_parta_arch)
-# Loading work.my_nadder(a_my_nadder)
-# Loading work.my_adder(a_my_adder)
-# Loading work.alu_partb(alu_partb_arch)
-# Loading work.alu_partc(alu_partc_arch)
-# Loading work.alu_partmul(alu_partmul_arch)
-# Loading work.mux_2x1_1_bit(mux_2x1_1_bit_a)
-# Loading work.memory(memoryy)
-# Loading work.my_ndff_sp(a_my_ndff_sp)
-# Loading work.wb(my_wb)
-# Loading work.mux4(my_mux4)
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(15 downto 13), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(15 downto 13).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(12), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(12).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(11), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(11).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(10), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(10).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(9), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(9).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(8 downto 6), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(8 downto 6).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(5 downto 3), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(5 downto 3).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(2 downto 0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(2 downto 0).
-init.do
-# invalid command name "init.do"
-do init.do
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M/mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f/ramm
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 3  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 1  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 1  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 8  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 9  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 10  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 11  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 12  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 13  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 14  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 15  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 16  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 17  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 18  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 19  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 20  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 21  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 22  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 23  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 200 ps  Iteration: 2  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 200 ps  Iteration: 3  Instance: /pipeline/E/alu_module
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fmem.mem} /pipeline/M/mem/ram
-restart
-# ** Warning: (vsim-3473) Component instance "pc : my_nDFF2" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f File: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fetch_module.vhd
-# ** Warning: (vsim-3473) Component instance "irr_buf : my_nDFF2" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f File: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fetch_module.vhd
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(15 downto 13), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(15 downto 13).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(12), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(12).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(11), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(11).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(10), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(10).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(9), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(9).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(8 downto 6), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(8 downto 6).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(5 downto 3), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(5 downto 3).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(2 downto 0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(2 downto 0).
-force -freeze sim:/pipeline/Rst 0 0
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/FRam.mem} /pipeline/f/ramm/ram
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fmem.mem} /pipeline/M/mem/ram
-force -freeze sim:/pipeline/Clk 0 0, 1 {50 ps} -r 100
-force -freeze sim:/pipeline/Rst 1 0
-force -freeze sim:/pipeline/INTERUPT 0 0
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M/mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f/ramm
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 3  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 1  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 1  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 8  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 9  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 10  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 11  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 12  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 13  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 14  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 15  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 16  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 17  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 18  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 19  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 20  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 21  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 22  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 23  Instance: /pipeline/E/alu_module
-# Compile of Fetch_module.vhd was successful.
-vsim work.pipeline
-# vsim 
-# Start time: 16:19:24 on May 01,2018
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.pipeline(a_pipeline)
-# Loading ieee.numeric_std(body)
-# Loading work.intcircuit(circuitint)
-# Loading work.counterint(behavioral)
-# Loading work.my_ndff(a_my_ndff)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.fetch(fetchh)
-# Loading work.ram(syncrama)
-# ** Warning: (vsim-3473) Component instance "pc : my_nDFF2" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f File: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fetch_module.vhd
-# Loading work.mux2_1(mux2_1_a)
-# ** Warning: (vsim-3473) Component instance "irr_buf : my_nDFF2" is not bound.
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f File: /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fetch_module.vhd
-# Loading work.controlunit(controlu)
-# Loading work.irsignals(controlir)
-# Loading work.rtcircuit(circuitrt)
-# Loading work.counter(behavioral)
-# Loading work.jmpoffset(offset)
-# Loading work.my_dff(a_my_dff)
-# Loading work.forwardingunit(forwardunit)
-# Loading work.forwarddetect(forwarding)
-# Loading work.comparing_component(comparing)
-# Loading work.comparator(comparing)
-# Loading work.r_type(srcdstrtype)
-# Loading work.r_type_component(tobuff)
-# Loading work.decode(my_decode)
-# Loading work.my_dec8(a_my_dec8)
-# Loading work.tristatebuff(a_tristatebuff)
-# Loading work.my_ndff_fall(a_my_ndff_fall)
-# Loading work.execute(execute_arch)
-# Loading work.alu_with_flags(alu_with_flags_arch)
-# Loading work.alu_integ(alu_integ_arch)
-# Loading work.alu_parta(alu_parta_arch)
-# Loading work.my_nadder(a_my_nadder)
-# Loading work.my_adder(a_my_adder)
-# Loading work.alu_partb(alu_partb_arch)
-# Loading work.alu_partc(alu_partc_arch)
-# Loading work.alu_partmul(alu_partmul_arch)
-# Loading work.mux_2x1_1_bit(mux_2x1_1_bit_a)
-# Loading work.memory(memoryy)
-# Loading work.my_ndff_sp(a_my_ndff_sp)
-# Loading work.wb(my_wb)
-# Loading work.mux4(my_mux4)
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(15 downto 13), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(15 downto 13).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(12), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(12).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(11), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(11).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(10), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(10).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(9), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(9).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(8 downto 6), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(8 downto 6).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(5 downto 3), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(5 downto 3).
-# ** Warning: (vsim-8684) No drivers exist on out port /pipeline/f/ir_buf(2 downto 0), and its initial value is not used.
-# Therefore, simulation behavior may occur that is not in compliance with
-# the VHDL standard as the initial values come from the base signal /pipeline/ir_buf_ID_IF_sig(2 downto 0).
-add wave -position end sim:/pipeline/*
-force -freeze sim:/pipeline/Rst 0 0
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/FRam.mem} /pipeline/f/ramm/ram
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fmem.mem} /pipeline/M/mem/ram
-force -freeze sim:/pipeline/Clk 0 0, 1 {50 ps} -r 100
-force -freeze sim:/pipeline/Rst 1 0
-force -freeze sim:/pipeline/INTERUPT 0 0
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M/mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f/ramm
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 3  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 1  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 1  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 8  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 9  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 10  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 11  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 12  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 13  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 14  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 15  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 16  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 17  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 18  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 19  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 20  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 21  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 22  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 23  Instance: /pipeline/E/alu_module
-# Compile of Fetch_module.vhd failed with 1 errors.
-
-# Compile of Fetch_module.vhd was successful.
-vsim work.pipeline
-# vsim 
-# Start time: 16:42:58 on May 01,2018
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.pipeline(a_pipeline)
-# Loading ieee.numeric_std(body)
-# Loading work.intcircuit(circuitint)
-# Loading work.counterint(behavioral)
-# Loading work.my_ndff(a_my_ndff)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.fetch(fetchh)
-# Loading work.ram(syncrama)
-# Loading work.my_ndff_fall(a_my_ndff_fall)
-# Loading work.mux2_1(mux2_1_a)
-# Loading work.controlunit(controlu)
-# Loading work.irsignals(controlir)
-# Loading work.rtcircuit(circuitrt)
-# Loading work.counter(behavioral)
-# Loading work.jmpoffset(offset)
-# Loading work.my_dff(a_my_dff)
-# Loading work.forwardingunit(forwardunit)
-# Loading work.forwarddetect(forwarding)
-# Loading work.comparing_component(comparing)
-# Loading work.comparator(comparing)
-# Loading work.r_type(srcdstrtype)
-# Loading work.r_type_component(tobuff)
-# Loading work.decode(my_decode)
-# Loading work.my_dec8(a_my_dec8)
-# Loading work.tristatebuff(a_tristatebuff)
-# Loading work.execute(execute_arch)
-# Loading work.alu_with_flags(alu_with_flags_arch)
-# Loading work.alu_integ(alu_integ_arch)
-# Loading work.alu_parta(alu_parta_arch)
-# Loading work.my_nadder(a_my_nadder)
-# Loading work.my_adder(a_my_adder)
-# Loading work.alu_partb(alu_partb_arch)
-# Loading work.alu_partc(alu_partc_arch)
-# Loading work.alu_partmul(alu_partmul_arch)
-# Loading work.mux_2x1_1_bit(mux_2x1_1_bit_a)
-# Loading work.memory(memoryy)
-# Loading work.my_ndff_sp(a_my_ndff_sp)
-# Loading work.wb(my_wb)
-# Loading work.mux4(my_mux4)
-add wave -position end sim:/pipeline/*
-force -freeze sim:/pipeline/Rst 0 0
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/FRam.mem} /pipeline/f/ramm/ram
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fmem.mem} /pipeline/M/mem/ram
-force -freeze sim:/pipeline/Clk 0 0, 1 {50 ps} -r 100
-force -freeze sim:/pipeline/Rst 1 0
-force -freeze sim:/pipeline/INTERUPT 0 0
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M/mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f/ramm
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 3  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 8  Instance: /pipeline/E/alu_module
-# Compile of Fetch_module.vhd failed with 1 errors.
-# Compile of Fetch_module.vhd was successful.
-vsim work.pipeline
-# vsim 
-# Start time: 16:48:26 on May 01,2018
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.pipeline(a_pipeline)
-# Loading ieee.numeric_std(body)
-# Loading work.intcircuit(circuitint)
-# Loading work.counterint(behavioral)
-# Loading work.my_ndff(a_my_ndff)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.fetch(fetchh)
-# Loading work.ram(syncrama)
-# Loading work.my_ndff_fall(a_my_ndff_fall)
-# Loading work.mux2_1(mux2_1_a)
-# Loading work.controlunit(controlu)
-# Loading work.irsignals(controlir)
-# Loading work.rtcircuit(circuitrt)
-# Loading work.counter(behavioral)
-# Loading work.jmpoffset(offset)
-# Loading work.my_dff(a_my_dff)
-# Loading work.forwardingunit(forwardunit)
-# Loading work.forwarddetect(forwarding)
-# Loading work.comparing_component(comparing)
-# Loading work.comparator(comparing)
-# Loading work.r_type(srcdstrtype)
-# Loading work.r_type_component(tobuff)
-# Loading work.decode(my_decode)
-# Loading work.my_dec8(a_my_dec8)
-# Loading work.tristatebuff(a_tristatebuff)
-# Loading work.execute(execute_arch)
-# Loading work.alu_with_flags(alu_with_flags_arch)
-# Loading work.alu_integ(alu_integ_arch)
-# Loading work.alu_parta(alu_parta_arch)
-# Loading work.my_nadder(a_my_nadder)
-# Loading work.my_adder(a_my_adder)
-# Loading work.alu_partb(alu_partb_arch)
-# Loading work.alu_partc(alu_partc_arch)
-# Loading work.alu_partmul(alu_partmul_arch)
-# Loading work.mux_2x1_1_bit(mux_2x1_1_bit_a)
-# Loading work.memory(memoryy)
-# Loading work.my_ndff_sp(a_my_ndff_sp)
-# Loading work.wb(my_wb)
-# Loading work.mux4(my_mux4)
-add wave -position end sim:/pipeline/*
-force -freeze sim:/pipeline/Rst 0 0
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/FRam.mem} /pipeline/f/ramm/ram
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fmem.mem} /pipeline/M/mem/ram
-force -freeze sim:/pipeline/Clk 0 0, 1 {50 ps} -r 100
-force -freeze sim:/pipeline/Rst 1 0
-force -freeze sim:/pipeline/INTERUPT 0 0
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M/mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f/ramm
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 3  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 8  Instance: /pipeline/E/alu_module
-
-restart
-add wave -position end sim:/pipeline/*
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/FRam.mem} /pipeline/f/ramm/ram
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fmem.mem} /pipeline/M/mem/ram
-force -freeze sim:/pipeline/Clk 0 0, 1 {50 ps} -r 100
-force -freeze sim:/pipeline/Rst 1 0
-force -freeze sim:/pipeline/INTERUPT 0 0
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M/mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f/ramm
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 3  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 8  Instance: /pipeline/E/alu_module
-# Compile of pipeline.vhd was successful.
-vsim work.pipeline
-# vsim 
-# Start time: 16:54:37 on May 01,2018
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.pipeline(a_pipeline)
-# Loading ieee.numeric_std(body)
-# Loading work.intcircuit(circuitint)
-# Loading work.counterint(behavioral)
-# Loading work.my_ndff(a_my_ndff)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.fetch(fetchh)
-# Loading work.ram(syncrama)
-# Loading work.my_ndff_fall(a_my_ndff_fall)
-# Loading work.mux2_1(mux2_1_a)
-# Loading work.controlunit(controlu)
-# Loading work.irsignals(controlir)
-# Loading work.rtcircuit(circuitrt)
-# Loading work.counter(behavioral)
-# Loading work.jmpoffset(offset)
-# Loading work.my_dff(a_my_dff)
-# Loading work.forwardingunit(forwardunit)
-# Loading work.forwarddetect(forwarding)
-# Loading work.comparing_component(comparing)
-# Loading work.comparator(comparing)
-# Loading work.r_type(srcdstrtype)
-# Loading work.r_type_component(tobuff)
-# Loading work.decode(my_decode)
-# Loading work.my_dec8(a_my_dec8)
-# Loading work.tristatebuff(a_tristatebuff)
-# Loading work.execute(execute_arch)
-# Loading work.alu_with_flags(alu_with_flags_arch)
-# Loading work.alu_integ(alu_integ_arch)
-# Loading work.alu_parta(alu_parta_arch)
-# Loading work.my_nadder(a_my_nadder)
-# Loading work.my_adder(a_my_adder)
-# Loading work.alu_partb(alu_partb_arch)
-# Loading work.alu_partc(alu_partc_arch)
-# Loading work.alu_partmul(alu_partmul_arch)
-# Loading work.mux_2x1_1_bit(mux_2x1_1_bit_a)
-# Loading work.memory(memoryy)
-# Loading work.my_ndff_sp(a_my_ndff_sp)
-# Loading work.wb(my_wb)
-# Loading work.mux4(my_mux4)
-add wave -position end sim:/pipeline/*
-force -freeze sim:/pipeline/Rst 0 0
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/FRam.mem} /pipeline/f/ramm/ram
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fmem.mem} /pipeline/M/mem/ram
-force -freeze sim:/pipeline/Clk 0 0, 1 {50 ps} -r 100
-force -freeze sim:/pipeline/Rst 1 0
-force -freeze sim:/pipeline/INTERUPT 0 0
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M/mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f/ramm
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 3  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 8  Instance: /pipeline/E/alu_module
-# Compile of pipeline.vhd was successful.
-vsim work.pipeline
-# vsim 
-# Start time: 17:00:10 on May 01,2018
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.pipeline(a_pipeline)
-# Loading ieee.numeric_std(body)
-# Loading work.intcircuit(circuitint)
-# Loading work.counterint(behavioral)
-# Loading work.my_ndff(a_my_ndff)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.fetch(fetchh)
-# Loading work.ram(syncrama)
-# Loading work.my_ndff_fall(a_my_ndff_fall)
-# Loading work.mux2_1(mux2_1_a)
-# Loading work.controlunit(controlu)
-# Loading work.irsignals(controlir)
-# Loading work.rtcircuit(circuitrt)
-# Loading work.counter(behavioral)
-# Loading work.jmpoffset(offset)
-# Loading work.my_dff(a_my_dff)
-# Loading work.forwardingunit(forwardunit)
-# Loading work.forwarddetect(forwarding)
-# Loading work.comparing_component(comparing)
-# Loading work.comparator(comparing)
-# Loading work.r_type(srcdstrtype)
-# Loading work.r_type_component(tobuff)
-# Loading work.decode(my_decode)
-# Loading work.my_dec8(a_my_dec8)
-# Loading work.tristatebuff(a_tristatebuff)
-# Loading work.execute(execute_arch)
-# Loading work.alu_with_flags(alu_with_flags_arch)
-# Loading work.alu_integ(alu_integ_arch)
-# Loading work.alu_parta(alu_parta_arch)
-# Loading work.my_nadder(a_my_nadder)
-# Loading work.my_adder(a_my_adder)
-# Loading work.alu_partb(alu_partb_arch)
-# Loading work.alu_partc(alu_partc_arch)
-# Loading work.alu_partmul(alu_partmul_arch)
-# Loading work.mux_2x1_1_bit(mux_2x1_1_bit_a)
-# Loading work.memory(memoryy)
-# Loading work.my_ndff_sp(a_my_ndff_sp)
-# Loading work.wb(my_wb)
-# Loading work.mux4(my_mux4)
-add wave -position end sim:/pipeline/*
-force -freeze sim:/pipeline/Rst 0 0
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/FRam.mem} /pipeline/f/ramm/ram
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fmem.mem} /pipeline/M/mem/ram
-force -freeze sim:/pipeline/Clk 0 0, 1 {50 ps} -r 100
-force -freeze sim:/pipeline/Rst 1 0
-force -freeze sim:/pipeline/INTERUPT 0 0
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M/mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f/ramm
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 3  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 8  Instance: /pipeline/E/alu_module
-# Compile of pipeline.vhd was successful.
-vsim work.pipeline
-# vsim 
-# Start time: 17:01:55 on May 01,2018
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.pipeline(a_pipeline)
-# Loading ieee.numeric_std(body)
-# Loading work.intcircuit(circuitint)
-# Loading work.counterint(behavioral)
-# Loading work.my_ndff(a_my_ndff)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.fetch(fetchh)
-# Loading work.ram(syncrama)
-# Loading work.my_ndff_fall(a_my_ndff_fall)
-# Loading work.mux2_1(mux2_1_a)
-# Loading work.controlunit(controlu)
-# Loading work.irsignals(controlir)
-# Loading work.rtcircuit(circuitrt)
-# Loading work.counter(behavioral)
-# Loading work.jmpoffset(offset)
-# Loading work.my_dff(a_my_dff)
-# Loading work.forwardingunit(forwardunit)
-# Loading work.forwarddetect(forwarding)
-# Loading work.comparing_component(comparing)
-# Loading work.comparator(comparing)
-# Loading work.r_type(srcdstrtype)
-# Loading work.r_type_component(tobuff)
-# Loading work.decode(my_decode)
-# Loading work.my_dec8(a_my_dec8)
-# Loading work.tristatebuff(a_tristatebuff)
-# Loading work.execute(execute_arch)
-# Loading work.alu_with_flags(alu_with_flags_arch)
-# Loading work.alu_integ(alu_integ_arch)
-# Loading work.alu_parta(alu_parta_arch)
-# Loading work.my_nadder(a_my_nadder)
-# Loading work.my_adder(a_my_adder)
-# Loading work.alu_partb(alu_partb_arch)
-# Loading work.alu_partc(alu_partc_arch)
-# Loading work.alu_partmul(alu_partmul_arch)
-# Loading work.mux_2x1_1_bit(mux_2x1_1_bit_a)
-# Loading work.memory(memoryy)
-# Loading work.my_ndff_sp(a_my_ndff_sp)
-# Loading work.wb(my_wb)
-# Loading work.mux4(my_mux4)
-add wave -position end sim:/pipeline/*
-force -freeze sim:/pipeline/Rst 0 0
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/FRam.mem} /pipeline/f/ramm/ram
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fmem.mem} /pipeline/M/mem/ram
-force -freeze sim:/pipeline/Clk 0 0, 1 {50 ps} -r 100
-force -freeze sim:/pipeline/Rst 1 0
-force -freeze sim:/pipeline/INTERUPT 0 0
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M/mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f/ramm
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 3  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 8  Instance: /pipeline/E/alu_module
-# Compile of pipeline.vhd was successful.
-vsim work.pipeline
-# vsim 
-# Start time: 17:11:19 on May 01,2018
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.pipeline(a_pipeline)
-# Loading ieee.numeric_std(body)
-# Loading work.intcircuit(circuitint)
-# Loading work.counterint(behavioral)
-# Loading work.my_ndff(a_my_ndff)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.fetch(fetchh)
-# Loading work.ram(syncrama)
-# Loading work.my_ndff_fall(a_my_ndff_fall)
-# Loading work.mux2_1(mux2_1_a)
-# Loading work.controlunit(controlu)
-# Loading work.irsignals(controlir)
-# Loading work.rtcircuit(circuitrt)
-# Loading work.counter(behavioral)
-# Loading work.jmpoffset(offset)
-# Loading work.my_dff(a_my_dff)
-# Loading work.forwardingunit(forwardunit)
-# Loading work.forwarddetect(forwarding)
-# Loading work.comparing_component(comparing)
-# Loading work.comparator(comparing)
-# Loading work.r_type(srcdstrtype)
-# Loading work.r_type_component(tobuff)
-# Loading work.decode(my_decode)
-# Loading work.my_dec8(a_my_dec8)
-# Loading work.tristatebuff(a_tristatebuff)
-# Loading work.execute(execute_arch)
-# Loading work.alu_with_flags(alu_with_flags_arch)
-# Loading work.alu_integ(alu_integ_arch)
-# Loading work.alu_parta(alu_parta_arch)
-# Loading work.my_nadder(a_my_nadder)
-# Loading work.my_adder(a_my_adder)
-# Loading work.alu_partb(alu_partb_arch)
-# Loading work.alu_partc(alu_partc_arch)
-# Loading work.alu_partmul(alu_partmul_arch)
-# Loading work.mux_2x1_1_bit(mux_2x1_1_bit_a)
-# Loading work.memory(memoryy)
-# Loading work.my_ndff_sp(a_my_ndff_sp)
-# Loading work.wb(my_wb)
-# Loading work.mux4(my_mux4)
-add wave -position end sim:/pipeline/*
-force -freeze sim:/pipeline/Rst 0 0
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/FRam.mem} /pipeline/f/ramm/ram
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fmem.mem} /pipeline/M/mem/ram
-force -freeze sim:/pipeline/Clk 0 0, 1 {50 ps} -r 100
-force -freeze sim:/pipeline/Rst 1 0
-force -freeze sim:/pipeline/INTERUPT 0 0
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M/mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f/ramm
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 3  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 8  Instance: /pipeline/E/alu_module
-# Compile of irControlSigs.vhd was successful.
-# Compile of jmpOffset.vhd was successful.
-# Compile of pipeline.vhd was successful.
-# 3 compiles, 0 failed with no errors.
-vsim work.pipeline
-# vsim 
-# Start time: 18:25:42 on May 01,2018
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.pipeline(a_pipeline)
-# Loading ieee.numeric_std(body)
-# Loading work.intcircuit(circuitint)
-# Loading work.counterint(behavioral)
-# Loading work.my_ndff(a_my_ndff)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.fetch(fetchh)
-# Loading work.ram(syncrama)
-# Loading work.my_ndff_fall(a_my_ndff_fall)
-# Loading work.mux2_1(mux2_1_a)
-# Loading work.controlunit(controlu)
-# Loading work.irsignals(controlir)
-# Loading work.rtcircuit(circuitrt)
-# Loading work.counter(behavioral)
-# Loading work.jmpoffset(offset)
-# Loading work.my_dff(a_my_dff)
-# Loading work.forwardingunit(forwardunit)
-# Loading work.forwarddetect(forwarding)
-# Loading work.comparing_component(comparing)
-# Loading work.comparator(comparing)
-# Loading work.r_type(srcdstrtype)
-# Loading work.r_type_component(tobuff)
-# Loading work.decode(my_decode)
-# Loading work.my_dec8(a_my_dec8)
-# Loading work.tristatebuff(a_tristatebuff)
-# Loading work.execute(execute_arch)
-# Loading work.alu_with_flags(alu_with_flags_arch)
-# Loading work.alu_integ(alu_integ_arch)
-# Loading work.alu_parta(alu_parta_arch)
-# Loading work.my_nadder(a_my_nadder)
-# Loading work.my_adder(a_my_adder)
-# Loading work.alu_partb(alu_partb_arch)
-# Loading work.alu_partc(alu_partc_arch)
-# Loading work.alu_partmul(alu_partmul_arch)
-# Loading work.mux_2x1_1_bit(mux_2x1_1_bit_a)
-# Loading work.memory(memoryy)
-# Loading work.my_ndff_sp(a_my_ndff_sp)
-# Loading work.wb(my_wb)
-# Loading work.mux4(my_mux4)
-add wave -position end sim:/pipeline/*
-force -freeze sim:/pipeline/Rst 0 0
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/FRam.mem} /pipeline/f/ramm/ram
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fmem.mem} /pipeline/M/mem/ram
-force -freeze sim:/pipeline/Clk 0 0, 1 {50 ps} -r 100
-force -freeze sim:/pipeline/Rst 1 0
-force -freeze sim:/pipeline/INTERUPT 0 0
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M/mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f/ramm
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 3  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 8  Instance: /pipeline/E/alu_module
-
-force -freeze sim:/pipeline/Rst 0 0
-run
-# Compile of pipeline.vhd failed with 1 errors.
-# Compile of pipeline.vhd was successful.
-vsim work.pipeline
-# vsim 
-# Start time: 18:34:49 on May 01,2018
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.pipeline(a_pipeline)
-# Loading ieee.numeric_std(body)
-# Loading work.intcircuit(circuitint)
-# Loading work.counterint(behavioral)
-# Loading work.my_ndff(a_my_ndff)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.fetch(fetchh)
-# Loading work.ram(syncrama)
-# Loading work.my_ndff_fall(a_my_ndff_fall)
-# Loading work.mux2_1(mux2_1_a)
-# Loading work.controlunit(controlu)
-# Loading work.irsignals(controlir)
-# Loading work.rtcircuit(circuitrt)
-# Loading work.counter(behavioral)
-# Loading work.jmpoffset(offset)
-# Loading work.my_dff(a_my_dff)
-# Loading work.forwardingunit(forwardunit)
-# Loading work.forwarddetect(forwarding)
-# Loading work.comparing_component(comparing)
-# Loading work.comparator(comparing)
-# Loading work.r_type(srcdstrtype)
-# Loading work.r_type_component(tobuff)
-# Loading work.decode(my_decode)
-# Loading work.my_dec8(a_my_dec8)
-# Loading work.tristatebuff(a_tristatebuff)
-# Loading work.execute(execute_arch)
-# Loading work.alu_with_flags(alu_with_flags_arch)
-# Loading work.alu_integ(alu_integ_arch)
-# Loading work.alu_parta(alu_parta_arch)
-# Loading work.my_nadder(a_my_nadder)
-# Loading work.my_adder(a_my_adder)
-# Loading work.alu_partb(alu_partb_arch)
-# Loading work.alu_partc(alu_partc_arch)
-# Loading work.alu_partmul(alu_partmul_arch)
-# Loading work.mux_2x1_1_bit(mux_2x1_1_bit_a)
-# Loading work.memory(memoryy)
-# Loading work.my_ndff_sp(a_my_ndff_sp)
-# Loading work.wb(my_wb)
-# Loading work.mux4(my_mux4)
-add wave -position end sim:/pipeline/*
-force -freeze sim:/pipeline/Rst 0 0
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/FRam.mem} /pipeline/f/ramm/ram
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fmem.mem} /pipeline/M/mem/ram
-force -freeze sim:/pipeline/Clk 0 0, 1 {50 ps} -r 100
-force -freeze sim:/pipeline/Rst 1 0
-force -freeze sim:/pipeline/INTERUPT 0 0
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M/mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f/ramm
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 3  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 8  Instance: /pipeline/E/alu_module
-force -freeze sim:/pipeline/Rst 0 0
-run
-
-# Compile of execute_module.vhd was successful.
-# Compile of pipeline.vhd failed with 1 errors.
-# Compile of pipeline.vhd was successful.
-# Compile of execute_module.vhd was successful.
-# Compile of pipeline.vhd was successful.
-# 2 compiles, 0 failed with no errors.
-vsim work.pipeline
-# vsim 
-# Start time: 18:56:52 on May 01,2018
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.pipeline(a_pipeline)
-# Loading ieee.numeric_std(body)
-# Loading work.intcircuit(circuitint)
-# Loading work.counterint(behavioral)
-# Loading work.my_ndff(a_my_ndff)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.fetch(fetchh)
-# Loading work.ram(syncrama)
-# Loading work.my_ndff_fall(a_my_ndff_fall)
-# Loading work.mux2_1(mux2_1_a)
-# Loading work.controlunit(controlu)
-# Loading work.irsignals(controlir)
-# Loading work.rtcircuit(circuitrt)
-# Loading work.counter(behavioral)
-# Loading work.jmpoffset(offset)
-# Loading work.my_dff(a_my_dff)
-# Loading work.forwardingunit(forwardunit)
-# Loading work.forwarddetect(forwarding)
-# Loading work.comparing_component(comparing)
-# Loading work.comparator(comparing)
-# Loading work.r_type(srcdstrtype)
-# Loading work.r_type_component(tobuff)
-# Loading work.decode(my_decode)
-# Loading work.my_dec8(a_my_dec8)
-# Loading work.tristatebuff(a_tristatebuff)
-# Loading work.execute(execute_arch)
-# Loading work.alu_with_flags(alu_with_flags_arch)
-# Loading work.alu_integ(alu_integ_arch)
-# Loading work.alu_parta(alu_parta_arch)
-# Loading work.my_nadder(a_my_nadder)
-# Loading work.my_adder(a_my_adder)
-# Loading work.alu_partb(alu_partb_arch)
-# Loading work.alu_partc(alu_partc_arch)
-# Loading work.alu_partmul(alu_partmul_arch)
-# Loading work.mux_2x1_1_bit(mux_2x1_1_bit_a)
-# Loading work.memory(memoryy)
-# Loading work.my_ndff_sp(a_my_ndff_sp)
-# Loading work.wb(my_wb)
-# Loading work.mux4(my_mux4)
-add wave -position end sim:/pipeline/*
-force -freeze sim:/pipeline/Rst 0 0
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/FRam.mem} /pipeline/f/ramm/ram
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fmem.mem} /pipeline/M/mem/ram
-force -freeze sim:/pipeline/Clk 0 0, 1 {50 ps} -r 100
-force -freeze sim:/pipeline/Rst 1 0
-force -freeze sim:/pipeline/INTERUPT 0 0
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M/mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f/ramm
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 3  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 8  Instance: /pipeline/E/alu_module
-
-force -freeze sim:/pipeline/Rst 0 0
-run
-
-
-# Compile of pipeline.vhd was successful.
-vsim work.pipeline
-# vsim 
-# Start time: 18:57:43 on May 01,2018
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.pipeline(a_pipeline)
-# Loading ieee.numeric_std(body)
-# Loading work.intcircuit(circuitint)
-# Loading work.counterint(behavioral)
-# Loading work.my_ndff(a_my_ndff)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.fetch(fetchh)
-# Loading work.ram(syncrama)
-# Loading work.my_ndff_fall(a_my_ndff_fall)
-# Loading work.mux2_1(mux2_1_a)
-# Loading work.controlunit(controlu)
-# Loading work.irsignals(controlir)
-# Loading work.rtcircuit(circuitrt)
-# Loading work.counter(behavioral)
-# Loading work.jmpoffset(offset)
-# Loading work.my_dff(a_my_dff)
-# Loading work.forwardingunit(forwardunit)
-# Loading work.forwarddetect(forwarding)
-# Loading work.comparing_component(comparing)
-# Loading work.comparator(comparing)
-# Loading work.r_type(srcdstrtype)
-# Loading work.r_type_component(tobuff)
-# Loading work.decode(my_decode)
-# Loading work.my_dec8(a_my_dec8)
-# Loading work.tristatebuff(a_tristatebuff)
-# Loading work.execute(execute_arch)
-# Loading work.alu_with_flags(alu_with_flags_arch)
-# Loading work.alu_integ(alu_integ_arch)
-# Loading work.alu_parta(alu_parta_arch)
-# Loading work.my_nadder(a_my_nadder)
-# Loading work.my_adder(a_my_adder)
-# Loading work.alu_partb(alu_partb_arch)
-# Loading work.alu_partc(alu_partc_arch)
-# Loading work.alu_partmul(alu_partmul_arch)
-# Loading work.mux_2x1_1_bit(mux_2x1_1_bit_a)
-# Loading work.memory(memoryy)
-# Loading work.my_ndff_sp(a_my_ndff_sp)
-# Loading work.wb(my_wb)
-# Loading work.mux4(my_mux4)
-add wave -position end sim:/pipeline/*
-force -freeze sim:/pipeline/Rst 0 0
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/FRam.mem} /pipeline/f/ramm/ram
-mem load -i {/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Fmem.mem} /pipeline/M/mem/ram
-force -freeze sim:/pipeline/Clk 0 0, 1 {50 ps} -r 100
-force -freeze sim:/pipeline/Rst 1 0
-force -freeze sim:/pipeline/INTERUPT 0 0
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M/mem
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f/ramm
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 3  Instance: /pipeline/E/alu_module
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 100 ps  Iteration: 8  Instance: /pipeline/E/alu_module
-
-force -freeze sim:/pipeline/Rst 0 0
-run
-
-
-# Compile of irControlSigs.vhd was successful.
-# Compile of controlUnit.vhd was successful.
 # Compile of Decode.vhd was successful.
+# Compile of execute_module.vhd failed with 1 errors.
+# Compile of pipeline.vhd failed with 2 errors.
+# 3 compiles, 2 failed with 3 errors.
+# Compile of execute_module.vhd failed with 1 errors.
+# Compile of pipeline.vhd failed with 2 errors.
+# 2 compiles, 2 failed with 3 errors.
+# Compile of execute_module.vhd failed with 1 errors.
+# Compile of pipeline.vhd failed with 2 errors.
+# 2 compiles, 2 failed with 3 errors.
+# Compile of execute_module.vhd failed with 1 errors.
+# Compile of pipeline.vhd failed with 2 errors.
+# 2 compiles, 2 failed with 3 errors.
+# Compile of execute_module.vhd was successful.
+# Compile of pipeline.vhd failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of pipeline.vhd failed with 1 errors.
+# Compile of pipeline.vhd failed with 1 errors.
 # Compile of pipeline.vhd was successful.
-# 3 compiles, 0 failed with no errors.
 vsim work.pipeline
 # vsim 
-# Start time: 21:23:17 on May 01,2018
+# Start time: 03:14:50 on May 02,2018
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -1416,6 +64,177 @@ vsim work.pipeline
 # Loading work.my_ndff_sp(a_my_ndff_sp)
 # Loading work.wb(my_wb)
 # Loading work.mux4(my_mux4)
+do init.do
+# vsim 
+# Start time: 03:15:03 on May 02,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pipeline(a_pipeline)
+# Loading ieee.numeric_std(body)
+# Loading work.intcircuit(circuitint)
+# Loading work.counterint(behavioral)
+# Loading work.my_ndff(a_my_ndff)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.fetch(fetchh)
+# Loading work.ram(syncrama)
+# Loading work.my_ndff_fall(a_my_ndff_fall)
+# Loading work.mux2_1(mux2_1_a)
+# Loading work.controlunit(controlu)
+# Loading work.irsignals(controlir)
+# Loading work.rtcircuit(circuitrt)
+# Loading work.counter(behavioral)
+# Loading work.jmpoffset(offset)
+# Loading work.my_dff(a_my_dff)
+# Loading work.forwardingunit(forwardunit)
+# Loading work.forwarddetect(forwarding)
+# Loading work.comparing_component(comparing)
+# Loading work.comparator(comparing)
+# Loading work.r_type(srcdstrtype)
+# Loading work.r_type_component(tobuff)
+# Loading work.decode(my_decode)
+# Loading work.my_dec8(a_my_dec8)
+# Loading work.tristatebuff(a_tristatebuff)
+# Loading work.execute(execute_arch)
+# Loading work.alu_with_flags(alu_with_flags_arch)
+# Loading work.alu_integ(alu_integ_arch)
+# Loading work.alu_parta(alu_parta_arch)
+# Loading work.my_nadder(a_my_nadder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.alu_partb(alu_partb_arch)
+# Loading work.alu_partc(alu_partc_arch)
+# Loading work.alu_partmul(alu_partmul_arch)
+# Loading work.mux_2x1_1_bit(mux_2x1_1_bit_a)
+# Loading work.memory(memoryy)
+# Loading work.my_ndff_sp(a_my_ndff_sp)
+# Loading work.wb(my_wb)
+# Loading work.mux4(my_mux4)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M/mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f/ramm
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /pipeline/E/alu_module
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 8  Instance: /pipeline/E/alu_module
+# Compile of pipeline.vhd was successful.
+do init.do
+# vsim 
+# Start time: 03:18:37 on May 02,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pipeline(a_pipeline)
+# Loading ieee.numeric_std(body)
+# Loading work.intcircuit(circuitint)
+# Loading work.counterint(behavioral)
+# Loading work.my_ndff(a_my_ndff)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.fetch(fetchh)
+# Loading work.ram(syncrama)
+# Loading work.my_ndff_fall(a_my_ndff_fall)
+# Loading work.mux2_1(mux2_1_a)
+# Loading work.controlunit(controlu)
+# Loading work.irsignals(controlir)
+# Loading work.rtcircuit(circuitrt)
+# Loading work.counter(behavioral)
+# Loading work.jmpoffset(offset)
+# Loading work.my_dff(a_my_dff)
+# Loading work.forwardingunit(forwardunit)
+# Loading work.forwarddetect(forwarding)
+# Loading work.comparing_component(comparing)
+# Loading work.comparator(comparing)
+# Loading work.r_type(srcdstrtype)
+# Loading work.r_type_component(tobuff)
+# Loading work.decode(my_decode)
+# Loading work.my_dec8(a_my_dec8)
+# Loading work.tristatebuff(a_tristatebuff)
+# Loading work.execute(execute_arch)
+# Loading work.alu_with_flags(alu_with_flags_arch)
+# Loading work.alu_integ(alu_integ_arch)
+# Loading work.alu_parta(alu_parta_arch)
+# Loading work.my_nadder(a_my_nadder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.alu_partb(alu_partb_arch)
+# Loading work.alu_partc(alu_partc_arch)
+# Loading work.alu_partmul(alu_partmul_arch)
+# Loading work.mux_2x1_1_bit(mux_2x1_1_bit_a)
+# Loading work.memory(memoryy)
+# Loading work.my_ndff_sp(a_my_ndff_sp)
+# Loading work.wb(my_wb)
+# Loading work.mux4(my_mux4)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/M/mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/E/alu_module/alu0/u2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/f/ramm
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 3  Instance: /pipeline/E/alu_module
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 8  Instance: /pipeline/E/alu_module
+run
+run
+run
+run
+run
+run
+run
+run
 # Break key hit
-# End time: 21:53:21 on May 01,2018, Elapsed time: 0:30:04
-# Errors: 0, Warnings: 0
+# Break key hit
+quit
+# End time: 03:23:40 on May 02,2018, Elapsed time: 0:05:03
+# Errors: 0, Warnings: 17

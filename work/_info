@@ -472,7 +472,7 @@ R71
 R11
 R12
 Edecode
-Z72 w1525202565
+Z72 w1525219742
 R1
 R2
 R3
@@ -480,13 +480,13 @@ Z73 8/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Micropro
 Z74 F/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Decode.vhd
 l0
 L5
-V2[QYW_NISga^aVJH_C>d[3
-!s100 GeG^V]H32Hk9AnNnXb2CJ2
+VmQJ^]gYEA=3D721M?e;m12
+!s100 dYG[gmbXQFf3b<z<9BFnY3
 R6
 32
-R55
+!s110 1525222521
 !i10b 1
-Z75 !s108 1525202569.190256
+Z75 !s108 1525222520.367075
 Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Decode.vhd|
 Z77 !s107 /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/Decode.vhd|
 !i113 1
@@ -495,14 +495,14 @@ R12
 Amy_decode
 R1
 R2
-DEx4 work 6 decode 0 22 2[QYW_NISga^aVJH_C>d[3
+DEx4 work 6 decode 0 22 mQJ^]gYEA=3D721M?e;m12
 l93
 L33
-V==H^IT]XSRY@<kPZEhmRM2
-!s100 WNch[n2hzC1ISe4W@n>9W2
+V4AVJmhm2HZ@R=EHKOF;cR0
+!s100 9>D;aEJ]noOSonV?HabXK1
 R6
 32
-R55
+!s110 1525222522
 !i10b 1
 R75
 R76
@@ -511,7 +511,7 @@ R77
 R11
 R12
 Eexecute
-Z78 w1525193784
+Z78 w1525223034
 R13
 R14
 R15
@@ -522,13 +522,13 @@ Z79 8/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Micropro
 Z80 F/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/execute_module.vhd
 l0
 L6
-VK<Z=3E8e7Ja360fV`Rj[73
-!s100 A3NFd87Mn]9bN2agPLjV91
+V2[4kQZ5m<@<NU=J_z@fNX3
+!s100 ]TJ<SaiGii?BKKUh2_[_Q0
 R6
 32
-Z81 !s110 1525193787
+Z81 !s110 1525223039
 !i10b 1
-Z82 !s108 1525193787.532755
+Z82 !s108 1525223039.745372
 Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/execute_module.vhd|
 Z84 !s107 /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/execute_module.vhd|
 !i113 1
@@ -540,11 +540,11 @@ R14
 R15
 R1
 R2
-DEx4 work 7 execute 0 22 K<Z=3E8e7Ja360fV`Rj[73
+DEx4 work 7 execute 0 22 2[4kQZ5m<@<NU=J_z@fNX3
 l81
 L43
-V9S:K5J5PNg01I9c[_3DSc3
-!s100 QP=9JRZ@FRi]@GTzLQ[8C3
+V5@D]_=V8?Fa@H7?:4<gJf2
+!s100 hJjS4L><ohhOKNk24lML?3
 R6
 32
 R81
@@ -1276,41 +1276,41 @@ R187
 R11
 R12
 Epipeline
-R72
+Z188 w1525223796
 R1
 R2
 R3
-Z188 8/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd
-Z189 F/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd
+Z189 8/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd
+Z190 F/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd
 l0
 L4
 V?7nh^_O2nAMoD;@IMh2J52
 !s100 J7HC`UiaM5ZK5XAZ^9^0V1
 R6
 32
-R55
+Z191 !s110 1525223799
 !i10b 1
-Z190 !s108 1525202569.241577
-Z191 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd|
-Z192 !s107 /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd|
+Z192 !s108 1525223799.119976
+Z193 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd|
+Z194 !s107 /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/pipeline.vhd|
 !i113 1
 R11
 R12
 Aa_pipeline
 R1
 R2
-Z193 DEx4 work 8 pipeline 0 22 ?7nh^_O2nAMoD;@IMh2J52
-l210
+Z195 DEx4 work 8 pipeline 0 22 ?7nh^_O2nAMoD;@IMh2J52
+l208
 L11
-VSk4o1fKgTR9:7k618f5Ln3
-!s100 5S5Ql^KZHFn4mieP>10JG3
+VDHc3;WFAi0V?M@:^RDjzN2
+!s100 ]CSceJ?`>MSO2>mK0bdXF2
 R6
 32
-R55
-!i10b 1
-R190
 R191
+!i10b 1
 R192
+R193
+R194
 !i113 1
 R11
 R12
@@ -1319,8 +1319,8 @@ R0
 R1
 R2
 R3
-Z194 8/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/R_Type.vhd
-Z195 F/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/R_Type.vhd
+Z196 8/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/R_Type.vhd
+Z197 F/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/R_Type.vhd
 l0
 L4
 VomcDZ9mEmlY5_=CC?hU_d2
@@ -1329,9 +1329,9 @@ R6
 32
 R43
 !i10b 1
-Z196 !s108 1525103715.991674
-Z197 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/R_Type.vhd|
-Z198 !s107 /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/R_Type.vhd|
+Z198 !s108 1525103715.991674
+Z199 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/R_Type.vhd|
+Z200 !s107 /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/R_Type.vhd|
 !i113 1
 R11
 R12
@@ -1347,9 +1347,9 @@ R6
 32
 R68
 !i10b 1
-R196
-R197
 R198
+R199
+R200
 !i113 1
 R11
 R12
@@ -1358,8 +1358,8 @@ R0
 R1
 R2
 R3
-Z199 8/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/R_type_component.vhd
-Z200 F/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/R_type_component.vhd
+Z201 8/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/R_type_component.vhd
+Z202 F/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/R_type_component.vhd
 l0
 L4
 VZ_OaF:?NVTfI0U0OUgB[A2
@@ -1368,9 +1368,9 @@ R6
 32
 R68
 !i10b 1
-Z201 !s108 1525103716.036722
-Z202 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/R_type_component.vhd|
-Z203 !s107 /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/R_type_component.vhd|
+Z203 !s108 1525103716.036722
+Z204 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/R_type_component.vhd|
+Z205 !s107 /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/R_type_component.vhd|
 !i113 1
 R11
 R12
@@ -1386,20 +1386,20 @@ R6
 32
 R68
 !i10b 1
-R201
-R202
 R203
+R204
+R205
 !i113 1
 R11
 R12
 Eram
-Z204 w1525098665
+Z206 w1525098665
 R15
 R1
 R2
 R3
-Z205 8/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/ram.vhd
-Z206 F/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/ram.vhd
+Z207 8/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/ram.vhd
+Z208 F/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/ram.vhd
 l0
 L5
 VZTSTbSa=:MFHQBeW`lYBj3
@@ -1408,9 +1408,9 @@ R6
 32
 R68
 !i10b 1
-Z207 !s108 1525103716.084338
-Z208 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/ram.vhd|
-Z209 !s107 /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/ram.vhd|
+Z209 !s108 1525103716.084338
+Z210 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/ram.vhd|
+Z211 !s107 /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/ram.vhd|
 !i113 1
 R11
 R12
@@ -1427,19 +1427,19 @@ R6
 32
 R68
 !i10b 1
-R207
-R208
 R209
+R210
+R211
 !i113 1
 R11
 R12
 Ertcircuit
-Z210 w1523909972
+Z212 w1523909972
 R1
 R2
 R3
-Z211 8/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/circuitRT.vhd
-Z212 F/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/circuitRT.vhd
+Z213 8/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/circuitRT.vhd
+Z214 F/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/circuitRT.vhd
 l0
 L5
 V^E=gJSEJ^zc:h<gQE>heB2
@@ -1448,9 +1448,9 @@ R6
 32
 R7
 !i10b 1
-Z213 !s108 1525103714.954787
-Z214 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/circuitRT.vhd|
-Z215 !s107 /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/circuitRT.vhd|
+Z215 !s108 1525103714.954787
+Z216 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/circuitRT.vhd|
+Z217 !s107 /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/circuitRT.vhd|
 !i113 1
 R11
 R12
@@ -1466,9 +1466,9 @@ R6
 32
 R7
 !i10b 1
-R213
-R214
 R215
+R216
+R217
 !i113 1
 R11
 R12
@@ -1477,8 +1477,8 @@ R0
 R1
 R2
 R3
-Z216 8/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/tristateBuff.vhd
-Z217 F/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/tristateBuff.vhd
+Z218 8/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/tristateBuff.vhd
+Z219 F/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/tristateBuff.vhd
 l0
 L5
 VC20?LT<ehPS5FNoX29BfA1
@@ -1487,9 +1487,9 @@ R6
 32
 R68
 !i10b 1
-Z218 !s108 1525103716.322359
-Z219 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/tristateBuff.vhd|
-Z220 !s107 /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/tristateBuff.vhd|
+Z220 !s108 1525103716.322359
+Z221 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/tristateBuff.vhd|
+Z222 !s107 /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/tristateBuff.vhd|
 !i113 1
 R11
 R12
@@ -1505,9 +1505,9 @@ R6
 32
 R68
 !i10b 1
-R218
-R219
 R220
+R221
+R222
 !i113 1
 R11
 R12
@@ -1516,8 +1516,8 @@ R0
 R1
 R2
 R3
-Z221 8/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/WB.vhd
-Z222 F/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/WB.vhd
+Z223 8/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/WB.vhd
+Z224 F/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/WB.vhd
 l0
 L5
 VQLYOBB4QX42YEbT`nO7D]3
@@ -1526,9 +1526,9 @@ R6
 32
 R68
 !i10b 1
-Z223 !s108 1525103716.368935
-Z224 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/WB.vhd|
-Z225 !s107 /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/WB.vhd|
+Z225 !s108 1525103716.368935
+Z226 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/WB.vhd|
+Z227 !s107 /home/fatema/Desktop/College/Third year/Second Term/Arch/Pipelined_Microprocessor/WB.vhd|
 !i113 1
 R11
 R12
@@ -1544,9 +1544,9 @@ R6
 32
 R68
 !i10b 1
-R223
-R224
 R225
+R226
+R227
 !i113 1
 R11
 R12

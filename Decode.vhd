@@ -12,13 +12,13 @@ entity Decode IS
 		 Rsrc_Buff_in,Rdst_Buff_in   : in std_logic_vector(m-1 downto 0 );
 
 		-- from CU 
-		mem_read_sig,RTI_sig,SETC_sig,CLRC_sig,SETC_or_CLRC_sig,en_exec_result_sig : in std_logic;
+		rtype_cu,mem_read_sig,RTI_sig,SETC_sig,CLRC_sig,SETC_or_CLRC_sig,en_exec_result_sig : in std_logic;
 		ALU_op_ctrl : in std_logic_vector (3 downto 0);
 		write_en_Rsrc,write_en_Rdst,inc_SP,en_SP,en_mem_write,out_en_reg,S1_WB,S0_WB: in std_logic;
 
 	
 		mem_read_sig_ID_IE,write_en_Rsrc_ID_IE,write_en_Rdst_ID_IE,inc_SP_ID_IE,en_SP_ID_IE,en_mem_write_ID_IE,out_en_reg_ID_IE,S1_WB_ID_IE,S0_WB_ID_IE: out std_logic;
-		RTI_sig_ID_IE,SETC_sig_ID_IE,CLRC_sig_ID_IE,SETC_or_CLRC_sig_ID_IE,en_exec_result_sig_ID_IE : out std_logic;
+		RTI_sig_ID_IE,SETC_sig_ID_IE,CLRC_sig_ID_IE,SETC_or_CLRC_sig_ID_IE,en_exec_result_sig_ID_IE,rtype_ID_IE : out std_logic;
 		ALU_op_ctrl_ID_IE : out std_logic_vector (3 downto 0);
 		-- end out CU signals 
 		Rsrc_out_RegFile,Rdst_out_RegFile	: out std_logic_vector(m-1 downto 0 );
@@ -199,6 +199,7 @@ R_en_exec_result_sig : my_DFF port map (clk,rst,'1',en_exec_result_sig,en_exec_r
 R_ALU_op_ctrl : my_nDFF_fall generic map (n=>4 ) port map (clk,rst,'1', ALU_op_ctrl,ALU_op_ctrl_ID_IE);
 R_write_en_Rsrc : my_DFF port map (clk,rst,'1',write_en_Rsrc,write_en_Rsrc_ID_IE);
 R_write_en_Rdst : my_DFF port map (clk,rst,'1',write_en_Rdst,write_en_Rdst_ID_IE);
+R_rType : my_DFF port map (clk,rst,'1',rtype_cu,rtype_ID_IE);
 R_inc_SP : my_DFF port map (clk,rst,'1',inc_SP,inc_SP_ID_IE);
 R_en_SP : my_DFF port map (clk,rst,'1',en_SP,en_SP_ID_IE);
 R_en_mem_write : my_DFF port map (clk,rst,'1',en_mem_write,en_mem_write_ID_IE);
