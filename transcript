@@ -1416,3 +1416,6 @@ vsim work.pipeline
 # Loading work.my_ndff_sp(a_my_ndff_sp)
 # Loading work.wb(my_wb)
 # Loading work.mux4(my_mux4)
+# Break key hit
+# End time: 21:53:21 on May 01,2018, Elapsed time: 0:30:04
+# Errors: 0, Warnings: 0
