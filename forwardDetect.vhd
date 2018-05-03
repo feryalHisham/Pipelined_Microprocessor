@@ -24,7 +24,7 @@ GENERIC ( n : integer := 3);
 END component;
 
 component my_DFF IS
-	 PORT( d,clk,rst,en : IN std_logic;
+	 PORT(clk,rst,en,d : IN std_logic;
 	    q : OUT std_logic);
 END component;
 --signal execResultLSrcCmp,execResultLDstCmp,memResSrcCmp,memResDstCmp,execResultHSrcCmp,execResultHDstCmp:std_logic;
@@ -49,8 +49,9 @@ BEGIN
 	
 	chooseExecResultSrcL: comparing_component GENERIC MAP (n=>3) port map (rSrcAddress_Buff,rSrcAddress_DE,writeEnrSrcDE,twoOperand,execResultHSrcSel);--,execResultHSrcCmp);
 	
-	chooseExecResultDstL: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_Buff,rSrcAddress_DE,writeEnrSrcDE,'1',execResultHDstSel);--,execResultHDstCmp);	
-	chooseExecResultDstL0: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_IR,rSrcAddress_DE,writeEnrSrcDE,'1',execResultHDstSel0);--,execResultHDstCmp);	
+	------------------------------- feryal shalt el '1'  w 5letha twoOperand bardo 34an fe 7alet el LDM el value btkon gahza no need to delay JMP ------------
+	chooseExecResultDstL: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_Buff,rSrcAddress_DE,writeEnrSrcDE,twoOperand,execResultHDstSel);--,execResultHDstCmp);	
+	chooseExecResultDstL0: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_IR,rSrcAddress_DE,writeEnrSrcDE,twoOperand,execResultHDstSel0);--,execResultHDstCmp);	
 
 	forwSrc<=(execResultLSrcSelSig or memResSrcSel or execResultHSrcSel) and forward;
 	forwDst<=(execResultLDstSelSig or memResDstSel or execResultHDstSel) and forward;
@@ -62,5 +63,5 @@ BEGIN
 	
 	rstReg<=(regRes and clk)or hardRst;
 	stallLDBuff<=regRes;
-	stallLDBuffL: my_DFF port map(regIn,clk,rstReg,'1',regRes);
+	stallLDBuffL: my_DFF port map(clk,rstReg,'1',regIn,regRes);
 END forwarding;

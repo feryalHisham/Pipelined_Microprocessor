@@ -13,8 +13,8 @@ ARCHITECTURE a_pipeline OF pipeline IS
 component fetch IS
 	
 	port (Clk : IN std_logic;
-              Reset,Int_en,select_offset,delay_jmp,RTI,RET,Int_pc_sel,stall_ld,jmp_cond,imm_buf: in std_logic;
-           pc_mem,Rdst_buf_ie_im,Rdst : IN std_logic_vector(15 DOWNTO 0);
+              Reset,Int_en,select_offset,delay_jmp,RTI,RET,Int_pc_sel,stall_ld,jmp_cond,imm_buf,IN_OR_LDM_ID_IE,LDM_ID_IE: in std_logic;
+           pc_mem,Rdst_buf_ie_im,Rdst,IN_Port,Imm_val_ID_IE  : IN std_logic_vector(15 DOWNTO 0);
           counter: IN std_logic_vector(2 DOWNTO 0);
 counter_RT: IN std_logic_vector(1 DOWNTO 0);
             ir_fetch,ir_buf,pc_call,pc_to_int: out std_logic_vector(15 DOWNTO 0)
@@ -45,7 +45,13 @@ port (	clk,rst: in std_logic ;
 	Rsrc_out_RegFile,Rdst_out_RegFile	: out std_logic_vector(m-1 downto 0 );
 	Rsrc_buff_ID_IE , Rdst_buff_ID_IE , IR_Immediate_ID_IE ,PC_Call_ID_IE,ReadinFetch_dataBus: out std_logic_vector(m-1 downto 0 );
 	Rsrc_add_ID_IE,Rdst_add_ID_IE: out std_logic_vector (2 downto 0);
-	Imm_buff_ID_IE: out std_logic
+	Imm_buff_ID_IE: out std_logic;
+
+	------------------------- feryal ----- added signal form FU delay_JMP----------------------
+		delay_JMP_fu : in std_logic;
+		delay_JMP_ID_IE: out std_logic;
+		IN_OR_LDM_cu,LDM_cu: in std_logic;
+		IN_OR_LDM_ID_IE,LDM_ID_IE: out std_logic
 	);
 end component;
 
@@ -122,7 +128,7 @@ GENERIC ( n : integer := 16);
 	twoOp,incSp,enSP ,enMemWr,lddORpop,setcORclrc,
 	imm,wrEnRdst,enExecRes,wrEnRsrc,outEnReg,
 	alu1,alu2,alu3,alu4,s1Wb,s0Wb,
-	RET,RTI,PUSH,STD,SETC,CLRC,memRead,rType: OUT std_logic;
+	RET,RTI,PUSH,STD,SETC,CLRC,memRead,rType,IN_OR_LDM_out,LDM_out: OUT std_logic;
 	counterRTout:OUT std_logic_vector (1 downto 0));     
 END component;
 
@@ -201,6 +207,11 @@ END component;
 		signal Stall_LD_buf_FU_sig,rtype_cu_sig,rtype_ID_IE_sig,rtype_IE_IM_sig
 		,mem_read_IE_IM_sig,mem_read_IM_IW_sig:std_logic;--mul_ID_IE,Exec_Result_H_sig,Exec_Result_L_si
 		------------------------------------------------
+
+	------------------- feryal added dol -----------------
+
+	signal delayJMP_ID_IE_sig,IN_OR_LDM_cu_sig,LDM_cu_sig,IN_OR_LDM_ID_IE_sig,LDM_ID_IE_sig :std_logic;
+---------------------------------------------------------------------
 		
 
      
@@ -215,18 +226,24 @@ int_cir:intCircuit port map(pc_to_int_sig,INTERUPT,stallLD_fu_sig,Clk,Rst,Int_en
 
 
 f:fetch port map(Clk,Rst,Int_en_int_cir_sig,offsetSel_cu_sig,delayJMP_fu_sig,RTI_cu_sig,
-	RET_cu_sig,selINTPC_int_cir_sig,stallLD_fu_sig,JMP_cond_CU_sig,imm_cu_sig,pc_mem_m_sig,Rdst_buf_IE_IM_sig , Rdst_dec_sig ,counter_sig,counter_RT_sig,ir_fetch_sig,ir_buf_ID_IF_sig,pc_call_ID_IF_sig ,pc_to_int_sig);
+									---- kant imm_cu_sig kman zwdt LDM and IN_OR_LDM---
+	RET_cu_sig,selINTPC_int_cir_sig,stallLD_fu_sig,JMP_cond_CU_sig,Imm_buff_ID_IE_sig, IN_OR_LDM_ID_IE_sig,LDM_ID_IE_sig,   
+	pc_mem_m_sig,Rdst_buf_IE_IM_sig , Rdst_dec_sig ,in_port,Immediate_val_ID_IE_sig,counter_sig,counter_RT_sig,ir_fetch_sig,ir_buf_ID_IF_sig,pc_call_ID_IF_sig ,pc_to_int_sig);
 
-CU:controlUnit port map(ir_fetch_sig,ir_buf_ID_IF_sig,flag_reg_sig,Clk,Rst,stallLD_fu_sig,delayJMP_fu_sig,JMP_cond_CU_sig, 
+------------------------------ feryal delayJMP_fu_sig -> mafrood tb2a delayJMP_ID_IE zy el design w elly gwa el CU
+
+CU:controlUnit port map(ir_fetch_sig,ir_buf_ID_IF_sig,flag_reg_sig,Clk,Rst,stallLD_fu_sig,delayJMP_ID_IE_sig,JMP_cond_CU_sig, 
 	offsetSel_cu_sig,twoOp_cu_sig,inc_SP_CU_sig,en_SP_CU_sig,en_mem_write_CU_sig,LDD_or_pop_CU_sig,SETC_or_CLRC_CU_sig,
 	imm_cu_sig,write_en_Rdst_CU_sig,en_exec_result_CU_sig,write_en_Rsrc_CU_sig,out_en_reg_CU_sig,
 	ALU_op_ctrl_CU_sig(3),ALU_op_ctrl_CU_sig(2),ALU_op_ctrl_CU_sig(1),ALU_op_ctrl_CU_sig(0),S1_WB_CU_sig,S0_WB_CU_sig,RET_cu_sig,
-	RTI_cu_sig,PUSH_cu_sig,STD_cu_sig,SETC_CU_sig,CLRC_CU_sig,mem_read_CU_sig,rtype_cu_sig,counter_RT_sig);
+	RTI_cu_sig,PUSH_cu_sig,STD_cu_sig,SETC_CU_sig,CLRC_CU_sig,mem_read_CU_sig,rtype_cu_sig,IN_OR_LDM_cu_sig,LDM_cu_sig,counter_RT_sig);
 
 
 FU: forwardingUnit port map(ir_fetch_sig,ir_buf_ID_IF_sig,Rsrc_add_ID_IE_sig,Rsrc_add_IE_IM_sig,Rdst_add_ID_IE_sig,Rdst_add_IE_IM_sig,
 write_en_Rsrc_ID_IE_sig,write_en_Rdst_ID_IE_sig,write_en_Rdst_IE_IM_sig,twoOp_cu_sig,
-mem_read_IE_IM_sig,mem_read_IM_IW_sig,write_en_Rsrc_IE_IM_sig,rtype_IE_IM_sig,Clk,Rst,rsrc_data,rdst_data,
+
+---------------- feryal sorry 2oltlk 8lt ya fatema  rtype_ID_IE_sig w write_en_Rsrc_ID_IE_sig w mem_read_IE_IM_sig hamsaha bs 2olt at2aked
+mem_read_IE_IM_sig,mem_read_IE_IM_sig,write_en_Rsrc_ID_IE_sig,rtype_ID_IE_sig,Clk,Rst,rsrc_data,rdst_data,
 Exec_Result_H_IE_IM_sig,Exec_Result_L_IE_IM_sig,mem_result_IM_IW_sig,Rsrc_buf_FU,Rdst_buf_FU,stallLD_fu_sig,Stall_LD_buf_FU_sig,delayJMP_fu_sig);
 --not sure who to pass stallld/buffered version-->which is undefined
 
@@ -243,7 +260,8 @@ D: Decode Generic map (m=>16) port map (Clk,Rst,ir_buf_ID_IF_sig,write_data_Rdst
 	ALU_op_ctrl_ID_IE_sig,
 	--end cu
 	rsrc_data,rdst_data,Rsrc_buff_ID_IE_sig,Rdst_buff_ID_IE_sig,Immediate_val_ID_IE_sig,PC_Call_ID_IE_sig,Rdst_dec_sig,
-	Rsrc_add_ID_IE_sig,Rdst_add_ID_IE_sig,Imm_buff_ID_IE_sig);
+	Rsrc_add_ID_IE_sig,Rdst_add_ID_IE_sig,Imm_buff_ID_IE_sig,delayJMP_fu_sig,
+	delayJMP_ID_IE_sig,IN_OR_LDM_cu_sig,LDM_cu_sig,IN_OR_LDM_ID_IE_sig,LDM_ID_IE_sig);
 
 
 E: execute port map (Clk,Rst,mem_read_ID_IE_sig,RTI_cu_sig,SETC_CU_sig,CLRC_CU_sig,SETC_or_CLRC_CU_sig,en_flag_buf_sig_INT,

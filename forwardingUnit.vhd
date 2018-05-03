@@ -40,7 +40,8 @@ END component;
 
 signal execResultLSrcSelSig,execResultLDstSelSig,forward,forwardSelSrc,forwardSelDst:std_logic;
 BEGIN
-	forward<=memReadMW or MulDE or RtypeDE;
+--------------feryal sorry 2oltlk 8alt-----------------
+	forward<=memReadEM or MulDE or RtypeDE;
 --	twoOp<=
    	ForwardDetection: forwardDetect port map (IRBuff(5 downto 3),rSrcAddress_DE,rSrcAddress_EM,IRBuff(2 downto 0),
 		rDstAddress_DE,rDstAddress_EM,IR(5 downto 3),writeEnrSrcDE,writeEnrDstDE,writeEnrDstEM,
