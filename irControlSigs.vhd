@@ -7,7 +7,7 @@ GENERIC ( n : integer := 16);
         twoOp,incSp,enSP ,enMemWr,lddORpop,setcORclrc,
         imm,wrEnRdst,enExecRes,wrEnRsrc,outEnReg,
         alu1,alu2,alu3,alu4,s1Wb,s0Wb,
-        rType,RET,RTI,PUSH,STD,SETC,CLRC,memRead,IN_OR_LDM_out,LDM_out : OUT std_logic);    -- feryal added  IN_OR_LDM_out,LDM_out
+        rType,RET,RTI,PUSH,STD,SETC,CLRC,memRead,IN_OR_LDM_out,LDM_out,writeEnrDst_ecxept_LDM_IN : OUT std_logic);    -- feryal added  IN_OR_LDM_out,LDM_out
 END ENTITY irSignals;
 
 
@@ -54,6 +54,7 @@ signal tempIncSP,tempEnSP,tempOutEnReg:std_logic;
 
 --------------------- feryal ---------------------
 signal SHLopcode,SHRopcode,LDMopcode,LDDopcode,STDopcode,IN_OR_LDM : std_logic;
+signal wrEnRdst_temp: std_logic;
 
 BEGIN
 
@@ -146,12 +147,14 @@ BEGIN
 
 	LDM_out <= not IRBuff(15) and IRBuff(14) and IRBuff(13) and ( not IRBuff(12) and not  IRBuff(11) and  IRBuff(10) and not IRBuff(9));
 
+	writeEnrDst_ecxept_LDM_IN <= wrEnRdst_temp and not IN_OR_LDM; 
 ----------------------------------------------------
 
-    wrEnRdst <='1' when IRBuff(15 downto 13) = addOp(6 downto 4)
+    wrEnRdst_temp <='1' when IRBuff(15 downto 13) = addOp(6 downto 4)
     or (IRBuff(15 downto 13) = popOp(6 downto 4) and not(IRBuff(15 downto 9)= rtiOp or IRBuff(15 downto 9) =  retOp))
     or (IRBuff(15 downto 13) = ldmOp(6 downto 4) and tempOutEnReg='0')
     else '0';
+wrEnRdst <= wrEnRdst_temp;
 
    memRead <='1' when IRBuff(15 downto 9) = popOp
    or IRBuff(15 downto 9) = lddOp
@@ -166,7 +169,7 @@ BEGIN
 
     RET<='1' when IRBuff(15 downto 9) =  retOp
     else '0';
-    RTI<='1' when IRBuff(15 downto 9) =  retOp
+    RTI<='1' when IRBuff(15 downto 9) =  rtiOp
     else '0';
     PUSH<='1' when IRBuff(15 downto 9) =  pushOp
     else '0';

@@ -6,7 +6,7 @@ ENTITY forwardDetect IS
 GENERIC ( n : integer := 3); 
 		PORT (  rSrcAddress_Buff,rSrcAddress_DE,rSrcAddress_EM 			:IN std_logic_vector(n-1 DOWNTO 0);
 			rDstAddress_Buff,rDstAddress_DE,rDstAddress_EM,rDstAddress_IR 	:IN std_logic_vector(n-1 DOWNTO 0);
-			writeEnrDstDE,writeEnrDstEM					:IN std_logic;
+			writeEnrDstDE,writeEnrDst_ecxept_LDM_IN_DE,writeEnrDstEM					:IN std_logic;
 			writeEnrSrcDE,twoOperand,forward				:IN std_logic;
 			memReadEM,clk ,hardRst							:IN std_logic;
 			execResultLSrcSel,execResultLDstSel,
@@ -37,20 +37,22 @@ BEGIN
 
 	-- rstDstRegs<=hardRst or writeEnrDstDE;
 	-- rstSrcRegs<=hardRst or writeEnrSrcDE;
+
+------------------------------- feryal shalt el '1' in case of JMP ya3ny lama ab2a bqaren b IR nafso  w 5letha writeEnrDst_ecxept_LDM_IN_DE bardo 34an fe 7alet el LDM el value btkon gahza no need to delay JMP ------------
 	execResultSrcL: comparing_component GENERIC MAP (n=>3) port map (rSrcAddress_Buff,rDstAddress_DE,writeEnrDstDE,twoOperand,execResultLSrcSelSig);--,execResultLSrcCmp);
 
 	execResultDstL: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_Buff,rDstAddress_DE,writeEnrDstDE,'1',execResultLDstSelSig);--,execResultLDstCmp);
-	execResultDstL0: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_IR,rDstAddress_DE,writeEnrDstDE,'1',execResultLDstSel0);--,execResultLDstCmp);
+	execResultDstL0: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_IR,rDstAddress_DE,writeEnrDstDE,writeEnrDst_ecxept_LDM_IN_DE,execResultLDstSel0);--,execResultLDstCmp);
 
 	memResSrcSelL: comparing_component GENERIC MAP (n=>3) port map (rSrcAddress_Buff,rDstAddress_EM,writeEnrDstDE,twoOperand,memResSrcSel);--,memResSrcCmp);
 
 	memResDstSelL: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_Buff,rDstAddress_EM,writeEnrDstDE,'1',memResDstSel);--,memResDstCmp);
-	memResDstSelL0: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_IR,rDstAddress_EM,writeEnrDstDE,'1',memResDstSel0);--,memResDstCmp);
+	memResDstSelL0: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_IR,rDstAddress_EM,writeEnrDstDE,writeEnrDst_ecxept_LDM_IN_DE,memResDstSel0);--,memResDstCmp);
 	
 	chooseExecResultSrcL: comparing_component GENERIC MAP (n=>3) port map (rSrcAddress_Buff,rSrcAddress_DE,writeEnrSrcDE,twoOperand,execResultHSrcSel);--,execResultHSrcCmp);
 	
-	------------------------------- feryal shalt el '1'  w 5letha twoOperand bardo 34an fe 7alet el LDM el value btkon gahza no need to delay JMP ------------
-	chooseExecResultDstL: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_Buff,rSrcAddress_DE,writeEnrSrcDE,twoOperand,execResultHDstSel);--,execResultHDstCmp);	
+	
+	chooseExecResultDstL: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_Buff,rSrcAddress_DE,writeEnrSrcDE,'1',execResultHDstSel);--,execResultHDstCmp);	
 	chooseExecResultDstL0: comparing_component GENERIC MAP (n=>3) port map (rDstAddress_IR,rSrcAddress_DE,writeEnrSrcDE,twoOperand,execResultHDstSel0);--,execResultHDstCmp);	
 
 	forwSrc<=(execResultLSrcSelSig or memResSrcSel or execResultHSrcSel) and forward;

@@ -87,7 +87,7 @@ pc_mux1_s<= int_pc_sel or Reset or RET or RTI;
 pc_mux1: mux2_1 port map(pc_mux2_out,pc_mem,pc_mux1_s,pc_in);
 pc_inc <= pc_out + 1;
 jmp_ir <= not(ir(15)) and not(ir(14)) and not(ir(13)) and not(ir(12)) and not(ir(11)) and (ir(10)) and (ir(9));
-call_ir <= not(ir(15)) and ir(14) and ir(13) and not(ir(12)) and not(ir(11)) and not(ir(10)) and not(ir(9));
+call_ir <= (ir(15)) and (not ir(14)) and (not ir(13)) and not(ir(12)) and not(ir(11)) and not(ir(10)) and not(ir(9));
 pc_mux3_s <= (call_ir and not(delay_jmp)) or (jmp_ir and not(delay_jmp));
 pc_mux2_s <= select_offset or pc_mux3_s;   
 pc_mux2: mux2_1 port map(pc_inc,pc_mux3_out,pc_mux2_s,pc_mux2_out);

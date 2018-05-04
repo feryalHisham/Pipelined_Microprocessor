@@ -29,7 +29,14 @@ entity Decode IS
 		delay_JMP_fu : in std_logic;
 		delay_JMP_ID_IE: out std_logic;
 		IN_OR_LDM_cu,LDM_cu: in std_logic;
-		IN_OR_LDM_ID_IE,LDM_ID_IE: out std_logic
+		IN_OR_LDM_ID_IE,LDM_ID_IE: out std_logic;
+		writeEnrDst_ecxept_LDM_IN_cu : in std_logic;
+		writeEnrDst_ecxept_LDM_IN_DE : out std_logic;
+		selOffsetPc : in std_logic;
+		selOffsetPc_ID_IE : out std_logic;
+		RTI_cu,RET_cu : in std_logic;
+		RTI_ID_IE,RET_ID_IE : out std_logic
+		
 	);
 END Decode;
 
@@ -95,6 +102,10 @@ signal sel_mux_data_ExcH_muxR0,sel_mux_data_ExcH_muxR1,sel_mux_data_ExcH_muxR2,s
 signal JMP_cond_OR_Stall_LD : std_logic;
 signal Rsrc_add,Rdst_add:  std_logic_vector (2 downto 0);
 
+------------------------ feryal --------------------------
+
+signal imm_buff_rst,Imm_buff_ID_IE_temp: std_logic;
+----------------------------
 begin 
 
 
@@ -173,9 +184,11 @@ sel_mux_data_ExcH_muxR4<=out_dec_write_Rsrc(4) and  write_en_Rsrc_IM_IW;
 sel_mux_data_ExcH_muxR5<=out_dec_write_Rsrc(5) and  write_en_Rsrc_IM_IW;
 
 -- ID_IE
+------------------ feryal ------------------------
+Imm_buff_ID_IE <= Imm_buff_ID_IE_temp;
+imm_buff_rst <= rst or (Imm_buff_ID_IE_temp and clk);
 
-
-R1_Imm_buff : my_DFF port map (clk,rst,'1',Imm_control_signal,Imm_buff_ID_IE);
+R1_Imm_buff : my_DFF port map (clk,imm_buff_rst,'1',Imm_control_signal,Imm_buff_ID_IE_temp);
 
 R2_Rsrc_buff : my_nDFF_fall generic map (n=>16 ) port map (clk,JMP_cond_OR_Stall_LD,'1',Rsrc_Buff_in,Rsrc_buff_ID_IE );
 
@@ -216,7 +229,10 @@ R_S0_WB: my_DFF port map (clk,rst,'1',S0_WB,S0_WB_ID_IE);
 R_delay_JMP: my_DFF port map (clk,rst,'1',delay_JMP_fu,delay_JMP_ID_IE);
 R_LDM: my_DFF port map (clk,rst,'1',LDM_cu,LDM_ID_IE);
 R_IN_OR_LDM: my_DFF port map (clk,rst,'1',IN_OR_LDM_cu,IN_OR_LDM_ID_IE);
-	
+R_writeEnRdst_except_LDM_IN: my_DFF port map (clk,rst,'1',writeEnrDst_ecxept_LDM_IN_cu,writeEnrDst_ecxept_LDM_IN_DE);
+R_selOffsetPc : my_DFF port map (clk,rst,'1',selOffsetPc,selOffsetPc_ID_IE);
+R_RET : my_DFF port map (clk,rst,'1',RET_cu,RET_ID_IE);
+R_RTI : my_DFF port map (clk,rst,'1',RTI_cu,RTI_ID_IE);	
 		
 	
 		
