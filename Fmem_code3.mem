@@ -1,7 +1,7 @@
 // memory data file (do not edit the following line - required for mem load use)
 // instance=/pipeline/M/mem/ram
 // format=mti addressradix=h dataradix=s version=1.0 wordsperline=1
-  0: 0000000000000010
+  0: 0000000000000000
   1: 0000000000000000
   2: 0000000000000000
   3: 0000000000000000
